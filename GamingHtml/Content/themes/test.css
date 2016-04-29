@@ -1,0 +1,110 @@
+﻿
+.container {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    width: 30%;
+    height: 30%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+}
+
+
+.rcorners {
+    border-radius: 10%;
+    background: #1ec3be;
+    opacity: 0.5;
+    
+    width: 30%;
+    height: 30%;
+    position: fixed;
+   
+    display: inline-block;
+    transform: translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+
+
+
+    .rcorners:hover {
+        transform: scale(3);
+        opacity: 1;
+   
+        
+    }
+
+.deg0 {
+    -moz-transform: translate(150%,-60%);
+    -ms-transform: translate(150%,-60%);
+    -o-transform: translate(150%,-60%);
+    -webkit-transform: translate(150%,-60%);
+    transform: translate(150%,-60%);
+}
+
+.deg60 {
+    transform: translate(60%,120%);
+}
+
+.deg120 {
+    transform: translate(-180%,120%);
+}
+
+.deg180 {
+    transform: translate(-240%,-60%);
+}
+
+.deg240 {
+    transform: translate(-180%,-210%);
+}
+
+.deg300 {
+    transform: translate(60%,-210%);
+}
+
+
+
+.line1, .line2 {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    border-top: 1px solid #fff;
+    transform: rotate(45deg);
+    transform-origin: 50% 50%;
+}
+
+.line2 {
+    transform: rotate(-45deg);
+}
+
+
+
+
+.wheel {
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    background: #f89322; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#f89322, #ffea0d); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#f89322, #ffea0d); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#f89322, #ffea0d); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#f89322, #ffea0d); /* Standard syntax */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

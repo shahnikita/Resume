@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Index</title>
+    <style type="text/css" media="screen" id="less:mario">
+        h1,
+        p {
+            text-align: center;
+        }
+
+        .gamelevel {
+            margin: 0 auto;
+            position: relative;
+            width: 800px;
+        }
+
+            .gamelevel #items {
+                width: 240px;
+                height: 224px;
+                position: relative;
+                margin: 50px auto 0;
+                background-image: url('../Images/Mario/background.png');
+                background-repeat: no-repeat;
+                background-position: 0 0;
+                overflow: hidden;
+                display: block;
+                z-index: 1;
+            }
+
+            .gamelevel #mario {
+                width: 240px;
+                height: 224px;
+                position: absolute;
+                left: 280px;
+                overflow: hidden;
+                display: block;
+                z-index: 5;
+            }
+
+            .gamelevel #enemies {
+                width: 240px;
+                height: 224px;
+                position: absolute;
+                left: 280px;
+                overflow: hidden;
+                display: block;
+                z-index: 4;
+            }
+
+            .gamelevel #level {
+                width: 240px;
+                height: 224px;
+                position: absolute;
+                top: 0;
+                left: 280px;
+                overflow: hidden;
+                display: block;
+                z-index: 2;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="gamelevel">
+      
+       
+        <canvas id="mario" width="240" height="224" class=""></canvas>
+        <canvas id="enemies" width="240" height="224"></canvas>
+        <canvas id="level" width="240" height="224" class=""></canvas>
+
+        <canvas id="items" width="240" height="224" class=""></canvas>
+    </div>
+</body>
+
+
+<script src="/Scripts/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="../Scripts/Custom/JSON/enemies.json.js"></script>
+<script type="text/javascript" src="../Scripts/Custom/JSON/objects.json.js"></script>
+<script src="../Scripts/Custom/index.js"></script>
+</html>
