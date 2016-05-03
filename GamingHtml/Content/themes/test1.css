@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿html, body {
     height: 100%;
     margin: 0px;
@@ -14,6 +15,12 @@
 .accordion {
     width: 100%;
     max-width: 1080px;
+=======
+﻿.accordion {
+    width: 100%;
+    max-width: 1080px;
+    height: 100%;
+>>>>>>> 1a5ab81db1d63826e866f09f9682b8f65c12e25c
     overflow: hidden;
     margin: 50px auto;
 }
@@ -26,16 +33,26 @@
         padding: 0;
     }
 
+<<<<<<< HEAD
 
         .accordion ul li {
             display: table-cell;
             vertical-align: top;
             position: relative;
             width: 8%;
+=======
+        .accordion ul li {
+            display: table-cell;
+            vertical-align: bottom;
+            position: relative;
+            width: 8%;
+            height: auto;
+>>>>>>> 1a5ab81db1d63826e866f09f9682b8f65c12e25c
             background-repeat: no-repeat;
             background-position: center center;
         }
 
+<<<<<<< HEAD
             .accordion ul li:nth-child(1) {
                 background-image: url(../../Images/Resume/back2.jpg);
             }
@@ -77,6 +94,9 @@
 
 
            .accordion ul li div {
+=======
+            .accordion ul li div {
+>>>>>>> 1a5ab81db1d63826e866f09f9682b8f65c12e25c
                 display: block;
                 overflow: hidden;
                 width: 100%;
@@ -85,6 +105,10 @@
 
                 .accordion ul li div a {
                     display: block;
+<<<<<<< HEAD
+=======
+                    height: 350px;
+>>>>>>> 1a5ab81db1d63826e866f09f9682b8f65c12e25c
                     width: 100%;
                     position: relative;
                     z-index: 3;
@@ -111,6 +135,7 @@
                         transition: all 400ms ease;
                     }
 
+<<<<<<< HEAD
                            
                     .accordion ul:hover li:hover a * {
                         opacity: 1;
@@ -119,6 +144,8 @@
                     }
 
 
+=======
+>>>>>>> 1a5ab81db1d63826e866f09f9682b8f65c12e25c
                     .accordion ul li div a h2 {
                         font-family: Montserrat, sans-serif;
                         text-overflow: clip;
@@ -134,6 +161,7 @@
                         white-space: inherit;
                     }
 
+<<<<<<< HEAD
 
 
        
@@ -145,6 +173,56 @@
     body {
         margin: 0;
       
+=======
+            .accordion ul li:nth-child(1) {
+                width: 100%;
+                background-image: url(../../Images/Resume/back2.jpg);
+            }
+
+            .accordion ul li:nth-child(2) {
+                background-image: url(../../Images/Resume/back9.jpg);
+                
+            }
+
+            .accordion ul li:nth-child(3) {
+                background-image: url(../../Images/Resume/back8.jpg);
+            }
+
+            .accordion ul li:nth-child(4) {
+                background-image: url(../../Images/Resume/back7.jpg);
+            }
+
+            .accordion ul li:nth-child(5) {
+                background-image: url(../../Images/Resume/back5.jpg);
+            }
+
+            .accordion ul li:nth-child(6) {
+                background-image: url(../../Images/Resume/back3.jpg);
+            }
+
+        .accordion ul:hover li {
+            width: 8%;
+        }
+
+            .accordion ul:hover li:hover {
+                width: 60%;
+            }
+
+                .accordion ul:hover li:hover a {
+                    background: rgba(0, 0, 0, 0.4);
+                }
+
+                    .accordion ul:hover li:hover a * {
+                        opacity: 1;
+                        -webkit-transform: translateX(0);
+                        transform: translateX(0);
+                    }
+
+@media screen and (max-width: 600px) {
+    body {
+        margin: 0;
+        height: 100%;
+>>>>>>> 1a5ab81db1d63826e866f09f9682b8f65c12e25c
     }
 
     .accordion ul li:hover {
@@ -161,6 +239,9 @@
         width: 100%;
         -webkit-transition: none;
         transition: none;
+<<<<<<< HEAD
          
+=======
+>>>>>>> 1a5ab81db1d63826e866f09f9682b8f65c12e25c
     }
 }
