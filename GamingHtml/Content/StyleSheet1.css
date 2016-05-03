@@ -1,0 +1,108 @@
+﻿html, body {
+    
+    margin: 0px;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    background: rgba(128, 128, 128, 0.43); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgba(128, 128, 128, 0.43),rgba(199, 208, 204, 0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(128, 128, 128, 0.43), rgba(199, 208, 204, 0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(128, 128, 128, 0.43), rgba(199, 208, 204, 0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(128, 128, 128, 0.43), rgba(199, 208, 204, 0)); /* Standard syntax */
+}
+
+.changing-text {
+    text-align: center;
+    top: 5%;
+    position: absolute;
+    left: 40%;
+    font-size: 40px;
+    font-weight:300;
+    font-family: 'Open Sans', sans-serif;
+    color: #5c5c5c;
+    height:20%;
+}
+
+.uberAccordion {
+    padding: 0;
+        display: inline;
+    top: 30%;
+    position: absolute;
+}
+
+    .uberAccordion > li {
+        list-style: none;
+        margin: 0;
+         
+    }
+
+        .uberAccordion > li > h1 {
+            color: #fff;
+            margin: 0;
+            font-size: 16px;
+            padding: 5px;
+            cursor: pointer;
+
+        }
+
+    .uberAccordion li:nth-child(1) {
+        background-image: url(../../Images/Resume/back2.jpg);
+    }
+
+    .uberAccordion li:nth-child(2)  {
+        background-image: url(../../Images/Resume/back9.jpg);
+    }
+
+    .uberAccordion li:nth-child(3){
+        background-image: url(../../Images/Resume/back8.jpg);
+    }
+
+     .uberAccordion li:nth-child(4){
+        background-image: url(../../Images/Resume/back7.jpg);
+    }
+
+      .uberAccordion li:nth-child(5){
+        background-image: url(../../Images/Resume/back5.jpg);
+    }
+
+       .uberAccordion li:nth-child(6){
+        background-image: url(../../Images/Resume/back3.jpg);
+    }
+
+
+
+
+    .uberAccordion > li > div {
+        color: #fff;
+        padding: 15px;
+        background-color: hsla(0, 0%, 100%, 0.11);
+    }
+
+
+    /* Default CSS for sub-accordion */
+
+    .uberAccordion .uberAccordion > li > h1 {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .uberAccordion .uberAccordion > li > div {
+       background: rgba(0, 0, 0, 0.4);
+        color: #FFF;
+    }
+
+
+    /* Default CSS for vertical orientation */
+
+    .uberAccordion.accordion-vertical {
+        height: 500px;
+    }
+
+    .uberAccordion .uberAccordion.accordion-vertical {
+        height: 260px;
+    }
+
+body {
+}

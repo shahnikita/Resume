@@ -189,10 +189,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\StyleSheet1.css" />
     <Content Include="Content\themes\StyleSheet1.css" />
     <Content Include="Content\themes\test.css" />
+    <Content Include="Content\themes\test1.css" />
+    <Content Include="Content\themes\test2.css" />
     <Content Include="HTML\HtmlPage1.html" />
     <Content Include="HTML\Test.html" />
+    <Content Include="HTML\test1.html" />
+    <Content Include="HTML\Test2.html" />
     <Content Include="Images\Mario\background.png" />
     <Content Include="Content\circle.png" />
     <Content Include="Content\download.png" />
@@ -275,6 +280,7 @@
     <Content Include="Scripts\Custom\index.js" />
     <Content Include="Scripts\Custom\Resume.js" />
     <Content Include="Scripts\Custom\test.js" />
+    <Content Include="Scripts\Custom\test2.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />

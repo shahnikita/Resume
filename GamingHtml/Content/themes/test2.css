@@ -1,0 +1,156 @@
+﻿
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    margin: auto;
+    padding: 0px;
+}
+
+.accordion {
+    width: 80%;
+    height: 80%;
+    margin: 5%;
+    position: absolute;
+}
+
+    .accordion ul {
+        display: table;
+        table-layout: fixed;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+    }
+
+        .accordion ul li {
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            height: 100%;
+            width: 8%;
+        }
+
+            .accordion ul li:nth-child(1) {
+                width: 60%;
+                background-image: url(../../Images/Resume/back2.jpg);
+            }
+
+            .accordion ul li:nth-child(2) {
+                background-image: url(../../Images/Resume/back9.jpg);
+            }
+
+            .accordion ul li:nth-child(3) {
+                background-image: url(../../Images/Resume/back8.jpg);
+            }
+
+            .accordion ul li:nth-child(4) {
+                background-image: url(../../Images/Resume/back7.jpg);
+            }
+
+            .accordion ul li:nth-child(5) {
+                background-image: url(../../Images/Resume/back5.jpg);
+            }
+
+            .accordion ul li:nth-child(6) {
+                background-image: url(../../Images/Resume/back3.jpg);
+            }
+
+            .accordion ul li div {
+                display: table-cell;
+                overflow: hidden;
+                width: 100%;
+                margin: 2%;
+            }
+
+
+
+                .accordion ul li div a {
+                    display: inline-block;
+                    width: 100%;
+                    position: relative;
+                    z-index: 3;
+                    padding: 15px 20px;
+                    -moz-box-sizing: border-box;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    color: #fff;
+                    text-decoration: none;
+                    font-family: Open Sans, sans-serif;
+                    -moz-transition: all 100ms ease;
+                    -o-transition: all 100ms ease;
+                    -webkit-transition: all 100ms ease;
+                    transition: all 100ms ease;
+                }
+
+                    .accordion ul li div a * {
+                        opacity: 0;
+                        margin: 0;
+                        width: 100%;
+                        -ms-text-overflow: ellipsis;
+                        -o-text-overflow: ellipsis;
+                        text-overflow: ellipsis;
+                        position: relative;
+                        z-index: 5;
+                        white-space: normal;
+                        overflow: hidden;
+                        -webkit-transform: translateX(-20px);
+                        -moz-transform: translateX(-20px);
+                        -ms-transform: translateX(-20px);
+                        -o-transform: translateX(-20px);
+                        transform: translateX(-20px);
+                        -webkit-transition: all 200ms ease;
+                        -moz-transition: all 200ms ease;
+                        -o-transition: all 200ms ease;
+                        transition: all 200ms ease;
+                    }
+
+
+
+                    .accordion ul li div a h2 {
+                        font-family: Montserrat, sans-serif;
+                        -ms-text-overflow: clip;
+                        -o-text-overflow: clip;
+                        text-overflow: clip;
+                        font-size: 24px;
+                        text-transform: uppercase;
+                        margin-bottom: 2px;
+                        top: 0%;
+                    }
+
+                    .accordion ul li div a p {
+                        top: 0%;
+                        font-size: 13.5px;
+                        white-space: inherit;
+                    }
+
+        .accordion ul:hover li {
+            width: 8%;
+        }
+
+            .accordion ul:hover li:hover {
+                width: 60%;
+            }
+
+                .accordion ul:hover li:hover a {
+                    background: rgba(0, 0, 0, 0.4);
+                }
+
+                    .accordion ul:hover li:hover a * {
+                        opacity: 1;
+                        -webkit-transform: translateX(0);
+                        -moz-transform: translateX(0);
+                        -ms-transform: translateX(0);
+                        -o-transform: translateX(0);
+                        transform: translateX(0);
+                    }
