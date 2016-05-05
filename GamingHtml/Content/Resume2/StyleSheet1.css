@@ -5,30 +5,15 @@
     background-size: cover;
 }
 
-.container {
-    width: 100%;
-}
-
-.changing-text {
-    text-align: center;
-    top: 3%;
-    position: absolute;
-    left: 40%;
-    font-size: 4.2vw;
-    font-weight: 300;
-    font-family: 'Open Sans', sans-serif;
-    color: #5c5c5c;
-    height: 20%;
-}
 
 .accordionContainer {
-    margin: 3%;
+    margin: 0;
 }
 
 .uberAccordion {
     padding: 0;
     display: inline;
-    top: 15%;
+   height:100%;
     position: absolute;
 }
 
@@ -102,7 +87,7 @@
     /* Default CSS for vertical orientation */
 
     .uberAccordion.accordion-vertical {
-        height: 500px;
+        height: 100%;
     }
 
     .uberAccordion .uberAccordion.accordion-vertical {

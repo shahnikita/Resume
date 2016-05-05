@@ -1,0 +1,161 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test</title>
+    <link href="../Content/Resume1/StyleSheet1.css" rel="stylesheet" />
+</head>
+
+<body>
+<div class="skw-pages">
+    
+  <div class="skw-page skw-page-1 active">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h2 class="skw-page__heading">Skewed One Page Scroll</h2>
+          <p class="skw-page__description">Demo Page</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skw-page skw-page-2">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h2 class="skw-page__heading">Page 2</h2>
+          <p class="skw-page__description">Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+  </div>
+  <div class="skw-page skw-page-3">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h2 class="skw-page__heading">Page 3</h2>
+          <p class="skw-page__description">Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skw-page skw-page-4">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h2 class="skw-page__heading">Page 4</h2>
+          <p class="skw-page__description">Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+  </div>
+  <div class="skw-page skw-page-5">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h2 class="skw-page__heading">Page 5</h2>
+          <p class="skw-page__description"> Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> 
+<script>
+    $(document).ready(function () {
+
+        var curPage = 1;
+        var numOfPages = $(".skw-page").length;
+        var animTime = 1000;
+        var scrolling = false;
+        var pgPrefix = ".skw-page-";
+
+        function pagination() {
+            scrolling = true;
+
+            $(pgPrefix + curPage).removeClass("inactive").addClass("active");
+            $(pgPrefix + (curPage - 1)).addClass("inactive");
+            $(pgPrefix + (curPage + 1)).removeClass("active");
+
+            setTimeout(function () {
+                scrolling = false;
+            }, animTime);
+        };
+
+        function navigateUp() {
+            if (curPage === 1) return;
+            curPage--;
+            pagination();
+        };
+
+        function navigateDown() {
+            if (curPage === numOfPages) return;
+            curPage++;
+            pagination();
+        };
+
+        $(document).on("mousewheel DOMMouseScroll", function (e) {
+            if (scrolling) return;
+            if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+                navigateUp();
+            } else {
+                navigateDown();
+            }
+        });
+
+        $(document).on("keydown", function (e) {
+            if (scrolling) return;
+            if (e.which === 38) {
+                navigateUp();
+            } else if (e.which === 40) {
+                navigateDown();
+            }
+        });
+
+    });
+</script>
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+</body>
+</html>
+

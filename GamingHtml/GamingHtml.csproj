@@ -189,12 +189,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Resume1\StyleSheet1.css" />
+    <Content Include="Content\Resume2\StyleSheet1.css" />
+    <Content Include="Content\Resume3\StyleSheet1.css" />
     <Content Include="Content\StyleSheet1.css" />
     <Content Include="Content\themes\StyleSheet1.css" />
     <Content Include="Content\themes\test.css" />
     <Content Include="Content\themes\test1.css" />
     <Content Include="Content\themes\test2.css" />
     <Content Include="HTML\HtmlPage1.html" />
+    <Content Include="HTML\Resume1.html" />
+    <Content Include="HTML\Resume2.html" />
+    <Content Include="HTML\Resume3.html" />
     <Content Include="HTML\Test.html" />
     <Content Include="HTML\test1.html" />
     <Content Include="HTML\Test2.html" />
@@ -267,7 +273,20 @@
     <Content Include="Images\Resume\back7.jpg" />
     <Content Include="Images\Resume\back8.jpg" />
     <Content Include="Images\Resume\back9.jpg" />
-    <Content Include="Images\Test\2452c9b.jpg" />
+    <Content Include="Images\Test\1.jpg" />
+    <Content Include="Images\Test\2.jpg" />
+    <Content Include="Images\Test\3.jpg" />
+    <Content Include="Images\Test\4.jpg" />
+    <Content Include="Images\Test\5.jpg" />
+    <Content Include="Images\Test\bookshelf-128.png" />
+    <Content Include="Images\Test\bridge.jpg" />
+    <Content Include="Images\Test\briefcase-128.png" />
+    <Content Include="Images\Test\contacts-128.png" />
+    <Content Include="Images\Test\dev-128.png" />
+    <Content Include="Images\Test\fabric.png" />
+    <Content Include="Images\Test\pic.jpg" />
+    <Content Include="Images\Test\profle-128.png" />
+    <Content Include="Images\Test\texture.jpg" />
     <Content Include="Scripts\Custom\JavaScript1.js" />
     <Content Include="Scripts\Custom\JSON\enemies.json.js" />
     <Content Include="Scripts\Custom\JSON\objects.json.js" />
@@ -279,6 +298,7 @@
     <Content Include="Scripts\Custom\crossAndKnot.js" />
     <Content Include="Scripts\Custom\index.js" />
     <Content Include="Scripts\Custom\Resume.js" />
+    <Content Include="Scripts\Custom\Resume2.js" />
     <Content Include="Scripts\Custom\test.js" />
     <Content Include="Scripts\Custom\test2.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />

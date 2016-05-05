@@ -1,56 +1,4 @@
-﻿//#region typing effects
-var texts = [
-"Hello!", "I'm a web developer", "I'm Nikita Shah"
-]
-
-var captionLength = 0;
-var caption = '';
-var i = 0;
-
-
-
-function testTypingEffect() {
-    //if (i == texts.length) {
-    //    i = 0;
-    //}
-    caption = texts[i];
-    i++;
-    type();
-
-
-}
-
-function type() {
-    captionEl.html(caption.substr(0, captionLength++));
-
-    if (captionLength < caption.length + 1) {
-        setTimeout('type()', 150);
-    }
-    if (captionLength == caption.length + 1) {
-        setTimeout('testErasingEffect()', 200);
-    }
-}
-
-function testErasingEffect() {
-    caption = captionEl.html();
-    captionLength = caption.length;
-    if (captionLength > 0) {
-        erase();
-    }
-}
-
-function erase() {
-    captionEl.html(caption.substr(0, captionLength--));
-    if (captionLength >= 0) {
-        setTimeout('erase()', 150);
-    } else {
-        captionLength = 0;
-        caption = '';
-        testTypingEffect();
-    }
-}
-
-//#endregion typing effects
+﻿
 
 
 (function ($) {
@@ -142,7 +90,7 @@ function erase() {
             switch (orientation) {
                 case 'vertical':
                     el.addClass(settings.verticalClass);
-                   
+
                     installVertical();
                     break;
 
@@ -155,7 +103,7 @@ function erase() {
                         uninstallVertical();
                     }
 
-                  
+
                     applyHorizontalBase();
 
                     break;
@@ -168,22 +116,7 @@ function erase() {
             state.orientation = orientation;
         }
 
-        //this.setAutoplay = function (enabled) {
-
-        //    var _this = this;
-
-        //    if (enabled) {
-        //        state.autoPlayInterval = setInterval(function () {
-        //            var totalSlides = el.children('li').children(settings.headerItem).length;
-        //            state.currentSlide = state.currentSlide < (totalSlides - 1) ? state.currentSlide + 1 : 0;
-        //            _this.toggleSlide(state.currentSlide, true);
-        //        }, settings.autoPlaySpeed);
-        //    } else {
-        //        if (typeof state.autoPlayInterval !== "undefined") {
-        //            clearInterval(state.autoPlayInterval);
-        //        }
-        //    }
-        //}
+      
 
         // Installs styling and events for vertical slider
 
@@ -291,7 +224,7 @@ function erase() {
 
             headers.on(settings.slideEvent, function (e) {
                 scope.toggleSlide(el.children('li').children(settings.headerItem).index(this));
-               // scope.setAutoplay(false);
+                // scope.setAutoplay(false);
 
                 e.stopImmediatePropagation();
             });
@@ -362,8 +295,8 @@ function erase() {
             'float': 'left',
             'height': '100%',
             'position': 'relative',
-         
-   
+
+
         },
 
         Headers: {
@@ -416,8 +349,8 @@ function erase() {
         contentClass: 'content'
     });
 
-    captionEl = $('#changingText');
-    testTypingEffect();
+    
+    
 
 
 }(jQuery));
