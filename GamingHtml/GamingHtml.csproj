@@ -198,6 +198,7 @@
     <Content Include="Content\themes\test1.css" />
     <Content Include="Content\themes\test2.css" />
     <Content Include="HTML\HtmlPage1.html" />
+    <Content Include="HTML\PopUp.html" />
     <Content Include="HTML\Resume1.html" />
     <Content Include="HTML\Resume2.html" />
     <Content Include="HTML\Resume3.html" />
