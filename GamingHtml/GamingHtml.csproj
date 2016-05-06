@@ -285,8 +285,12 @@
     <Content Include="Images\Test\contacts-128.png" />
     <Content Include="Images\Test\dev-128.png" />
     <Content Include="Images\Test\fabric.png" />
+    <Content Include="Images\Test\facebook.png" />
+    <Content Include="Images\Test\github.png" />
+    <Content Include="Images\Test\linkedin.png" />
     <Content Include="Images\Test\pic.jpg" />
     <Content Include="Images\Test\profle-128.png" />
+    <Content Include="Images\Test\stachoverflow.png" />
     <Content Include="Images\Test\texture.jpg" />
     <Content Include="Scripts\Custom\JavaScript1.js" />
     <Content Include="Scripts\Custom\JSON\enemies.json.js" />
