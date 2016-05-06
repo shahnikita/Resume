@@ -116,14 +116,13 @@
 
 /*pop up close*/
 .close:before {
-  position: relative;
-  display: inline-block;
- 
-  overflow: hidden;
-  content:"X";
-  float:right;
-  }
-   
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    content: "X";
+    float: right;
+}
+
 
 .md-modal {
     position: fixed;
@@ -152,17 +151,66 @@
 
 
 /* Content styles */
-.md-content {
+
+
+/*.profile-content {
     color: #fff;
-    background: #578AA9; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#578AA9, hsla(152, 10%, 51%, 0.61)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#578AA9,  hsla(152, 10%, 51%, 0.61)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#578AA9, hsla(152, 10%, 51%, 0.61)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#578AA9, hsla(152, 10%, 51%, 0.61)); /* Standard syntax */
+    background: #578AA9; 
+    background: -webkit-linear-gradient(#578AA9, hsla(152, 10%, 51%, 0.61)); 
+    background: -o-linear-gradient(#578AA9, hsla(152, 10%, 51%, 0.61));
+    background: -moz-linear-gradient(#578AA9, hsla(152, 10%, 51%, 0.61));
+    background: linear-gradient(#578AA9, hsla(152, 10%, 51%, 0.61)); 
+}
+
+.education-content {
+    color: #fff;
+    background: #F5BCB1; 
+    background: -webkit-linear-gradient(#F5BCB1, rgba(63, 81, 181, 0.14));
+    background: -o-linear-gradient(#F5BCB1, rgba(63, 81, 181, 0.14)); 
+    background: -moz-linear-gradient(#F5BCB1, rgba(63, 81, 181, 0.14));
+    background: linear-gradient(#F5BCB1, rgba(63, 81, 181, 0.14)); 
+}
+
+.experience-content {
+    color: #fff;
+    background: #ADC0E8; 
+    background: -webkit-linear-gradient(#ADC0E8, rgba(119, 106, 80, 0.71));
+    background: -o-linear-gradient(#ADC0E8, rgba(119, 106, 80, 0.71)); 
+    background: -moz-linear-gradient(#7A9BE0, rgba(119, 106, 80, 0.71)); 
+    background: linear-gradient(#ADC0E8, rgba(119, 106, 80, 0.71));  
+}
+
+.projects-content {
+    color: #fff;
+    background: #74E4E4; 
+    background: -webkit-linear-gradient(#74E4E4, rgba(136, 114, 58, 0.54)); 
+    background: -o-linear-gradient(#74E4E4,rgba(136, 114, 58, 0.54));
+    background: -moz-linear-gradient(#74E4E4, rgba(136, 114, 58, 0.54)); 
+    background: linear-gradient(#74E4E4, rgba(136, 114, 58, 0.54)); 
+}
+
+.contact-content {
+    color: #fff;
+    background: #54574E; 
+    background: -webkit-linear-gradient( #54574E,rgba(246, 239, 233, 0.7)); 
+    background: -o-linear-gradient( #54574E,rgba(246, 239, 233, 0.7)); 
+    background: -moz-linear-gradient( #54574E,rgba(246, 239, 233, 0.7)); 
+    background: linear-gradient( #54574E,rgba(246, 239, 233, 0.7)); 
+}*/
+
+
+.md-content {
     position: relative;
     border-radius: 3px;
     margin: 0 auto;
     height: 100%;
+
+    color: #fff;
+    background: #578AA9; 
+    background: -webkit-linear-gradient(#578AA9, hsla(152, 10%, 51%, 0.61)); 
+    background: -o-linear-gradient(#578AA9, hsla(152, 10%, 51%, 0.61));
+    background: -moz-linear-gradient(#578AA9, hsla(152, 10%, 51%, 0.61));
+    background: linear-gradient(#578AA9, hsla(152, 10%, 51%, 0.61)); 
 }
 
     .md-content h3 {
@@ -213,16 +261,16 @@
 }
 
 .container-rotate {
-   	-webkit-transform: rotateX(-2deg);
-	-moz-transform: rotateX(-2deg);
-	-ms-transform: rotateX(-2deg);
-	transform: rotateX(-2deg);
-	-webkit-transform-origin: 50% 0%;
-	-moz-transform-origin: 50% 0%;
-	transform-origin: 50% 0%;
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	transform-style: preserve-3d;
+    -webkit-transform: rotateX(-2deg);
+    -moz-transform: rotateX(-2deg);
+    -ms-transform: rotateX(-2deg);
+    transform: rotateX(-2deg);
+    -webkit-transform-origin: 50% 0%;
+    -moz-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 
 .md-effect-17 .md-content {
@@ -236,7 +284,7 @@
 }
 
 .md-show.md-effect-17 .md-content {
-   transform: rotateX(0deg); 
+    transform: rotateX(0deg);
     opacity: 1;
     transition: all 0.3s 0.2s;
 }
@@ -248,4 +296,13 @@
     -moz-perspective: 600px;
     -ms-perspective: 600px;
     perspective: 600px;
+}
+
+
+/*Google map*/
+.google-map {
+     width: 60%;
+    height: 60%;
+    float: left;
+
 }

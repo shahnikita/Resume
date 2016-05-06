@@ -31,12 +31,12 @@
 
     </div>
 
-    <div class="md-modal md-effect-17" id="profile">
+    <div class="md-modal md-effect-17 profile-content" id="profile">
         <div class="md-content">
             <h3>Modal Dialog
                 <span class="close"></span>
             </h3>
-            
+
             <div>
                 <p>This is a modal window. You can do the following things with it:</p>
                 <ul>
@@ -49,9 +49,9 @@
         </div>
     </div>
 
-    <div class="md-modal md-effect-17" id="education">
+    <div class="md-modal md-effect-17 education-content" id="education">
         <div class="md-content">
-           <h3>Modal Dialog <span class="close"></span> </h3>
+            <h3>Modal Dialog <span class="close"></span></h3>
             <div>
                 <p>This is a modal window. You can do the following things with it:</p>
                 <ul>
@@ -64,9 +64,9 @@
         </div>
     </div>
 
-    <div class="md-modal md-effect-17" id="experience">
+    <div class="md-modal md-effect-17 experience-content" id="experience">
         <div class="md-content">
-           <h3>Modal Dialog <span class="close"></span> </h3>
+            <h3>Modal Dialog <span class="close"></span></h3>
             <div>
                 <p>This is a modal window. You can do the following things with it:</p>
                 <ul>
@@ -79,9 +79,9 @@
         </div>
     </div>
 
-    <div class="md-modal md-effect-17" id="projects">
+    <div class="md-modal md-effect-17 projects-content" id="projects">
         <div class="md-content">
-           <h3>Modal Dialog <span class="close"></span> </h3>
+            <h3>Modal Dialog <span class="close"></span></h3>
             <div>
                 <p>This is a modal window. You can do the following things with it:</p>
                 <ul>
@@ -94,18 +94,15 @@
         </div>
     </div>
 
-    <div class="md-modal md-effect-17" id="contact">
+    <div class="md-modal md-effect-17 contact-content" id="contact">
         <div class="md-content">
-           <h3>Modal Dialog <span class="close"></span> </h3>
-            <div>
+            <h3>Modal Dialog <span class="close"></span></h3>
+            
                 <p>This is a modal window. You can do the following things with it:</p>
-                <ul>
-                    <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                    <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                    <li><strong>Close:</strong> click on the button below to close the modal.</li>
-                </ul>
-                <button class="md-close" id="Button4">Close me!</button>
-            </div>
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238366.4897025642!2d73.03300029303715!3d22.32204248029837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc8ab91a3ddab%3A0xac39d3bfe1473fb8!2sVadodara%2C+Gujarat!5e1!3m2!1sen!2sin!4v1462527018447"
+                    width: "50%" height: "60%" frameborder="0" style="border:0;width: 50%;height: 60%; float:right;" allowfullscreen></iframe>
+               
+            
         </div>
     </div>
 
@@ -114,11 +111,12 @@
 
 </body>
 <script src="../Scripts/jquery-1.7.1.js"></script>
+   <!-- <script src="https://maps.googleapis.com/maps/api/js"></script>-->
 <script type="text/javascript">
     $(document).ready(function () {
 
-        function toggleTileHoverClass(){           
-                $(this).toggleClass("tiles-hover");            
+        function toggleTileHoverClass() {
+            $(this).toggleClass("tiles-hover");
         }
         function clickTile() {
             $(".container").addClass("container-rotate");
@@ -134,9 +132,9 @@
         $(".tiles").on("hover", toggleTileHoverClass);
 
 
-        $(".tiles").on("click",clickTile);
+        $(".tiles").on("click", clickTile);
 
-        
+
         //model close
         $(".md-close, .close").on("click", function () {
             $(".container").removeClass("container-rotate");
@@ -146,7 +144,11 @@
             $(".tiles").on("click", clickTile);
         });
 
-       
+        //var mapCanvas = document.getElementById("map");
+        //var mapOptions = {
+        //    center: new google.maps.LatLng(22.3072, 73.1812), zoom: 10
+        //}
+        //var map = new google.maps.Map(mapCanvas, mapOptions);
     });
 </script>
 </html>
