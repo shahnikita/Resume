@@ -197,6 +197,9 @@
     <Content Include="Content\themes\test.css" />
     <Content Include="Content\themes\test1.css" />
     <Content Include="Content\themes\test2.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="HTML\HtmlPage1.html" />
     <Content Include="HTML\PopUp.html" />
     <Content Include="HTML\Resume1.html" />
@@ -295,6 +298,11 @@
     <Content Include="Scripts\Custom\JavaScript1.js" />
     <Content Include="Scripts\Custom\JSON\enemies.json.js" />
     <Content Include="Scripts\Custom\JSON\objects.json.js" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="HTML\CrossAndKnot.html" />
     <Content Include="HTML\Index.html" />
