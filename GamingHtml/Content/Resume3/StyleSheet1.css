@@ -1,8 +1,10 @@
-﻿html, body {
+﻿@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+html, body {
     width: 100%;
     margin: 0px;
     height: 100%;
-    font-family: sans-serif;
+    font-family: 'Open Sans';
     font-weight: normal;
     -webkit-font-smoothing: antialiased!important;
 }
@@ -208,19 +210,20 @@
     -webkit-border-radius: 3px;
     border-radius: 3px;
     margin: 0 auto;
-    height: 100%;
-    color: #000;
+    color: #fff;
     background: #578AA9;
     background: -webkit-linear-gradient(#578AA9, hsla(152, 10%, 51%, 0.61));
     background: -o-linear-gradient(#578AA9, hsla(152, 10%, 51%, 0.61));
     background: -moz-linear-gradient(#578AA9, hsla(152, 10%, 51%, 0.61));
     /*background: linear-gradient(#578AA9, hsla(152, 10%, 51%, 0.61));*/
-    background: linear-gradient(white, rgba(171, 175, 177, 0.62));
+    background: linear-gradient(#2A2545, rgba(198, 163, 157, 0.84));
+    width: 100%;
+    height: 100%;
 }
-
+    /*header*/
     .md-content h3 {
         margin: 0;
-        padding: 1.5% 1.5% 1.5% 0;
+        padding: 2.5% 1.8% 1.5% 0;
         text-align: center;
         font-size: 4.5vmin;
         font-weight: normal;
@@ -229,42 +232,68 @@
         -webkit-border-radius: 3px 3px 0 0;
         border-radius: 3px 3px 0 0;
     }
+    /*content*/
+    .md-content > div {
+        padding: 1.5%;
+        margin: 0;
+        /*border: 1px solid #131212;*/
+        width: 97%;
+        height: 75%;
+        position: relative;
+        top: 0%;
+        left: 0%;
+    }
 
-    /*.md-content > div {
+.md-content-left {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 45%;
+}
+
+.md-content-right {
+    /*border: 1px solid #131212;*/
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    height: 100%;
+    width: 45%;
+}
+/*.md-content > div {
         padding: 5%;
         margin: 0;
         font-size: 2vw;
     }*/
 
-    /*.md-content > div p {
+/*.md-content > div p {
             margin: 0;
             padding: 10px 0;
         }*/
 
-    .md-content > div ul {
-        padding: 3% 2%;
-        margin: 0;
-        font-size: 1.2vw;
-        list-style: none;
+.md-content > div ul {
+    padding: 3% 2%;
+    margin: 0;
+    font-size: 1.2vw;
+    list-style: none;
+}
+
+    .md-content > div ul li {
+        padding: 5px 0;
     }
 
-        .md-content > div ul li {
-            padding: 5px 0;
-        }
-
-    .md-content button {
-        display: block;
-        margin: 0 auto;
-        font-size: 0.8em;
-    }
+.md-content button {
+    display: block;
+    margin: 0 auto;
+    font-size: 0.8em;
+}
 
 /* Effect 17:  Slide in from bottom with perspective on container */
 .md-show.md-effect-17 ~ .container {
     height: 100%;
     overflow: hidden;
-    -webkit-transition: -webkit-transform 0.3s;
-    -moz-transition: -moz-transform 0.3s;
-    transition: transform 0.3s;
+    -webkit-transition: -webkit-transform 0.4s;
+    -moz-transition: -moz-transform 0.4s;
+    transition: transform 0.4s;
 }
 
 .container-rotate {
@@ -309,41 +338,67 @@
 /*Google map*/
 .google-map {
     border: 0;
-    width: 50%;
-    height: 70%;
-    float: right;
-    margin: 2%;
-}
-
-.home {
-    max-width: 4.5%;
+    width: 95%;
+    height: 98%;
+    margin: 2.5%;
+    /*padding-top: 2%;*/
 }
 
 .pop-up {
-    /*width: 50%;
-   margin: 0% 2%;*/
-    max-width: 40%;
-    margin: 2% 2% 0% 2%;
-    background-color: #DEDEDE;
-    /* border: 0.2px solid #493E3C; */
-    min-height: 38%;
-    padding: 10px;
+    margin: 0%;
+    padding: 2%;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
     border-radius: 10px;
 }
 
 .pop-up-header {
     font-size: 3vmin;
-    border-bottom: 1.5px dashed #000;
-    margin: 0% 5% 2% 0%;
-    text-shadow: none;
+    border-bottom: 1.5px dashed #fff;
 }
 
 .pop-up-content {
     font-size: 2.5vmin;
-    margin: 0;
-    text-shadow: none;
     margin-bottom: 1.5%;
+    margin-top: 1.5%;
 }
+
+/*set font for icon*/
+.font-icon-size {
+    font-size: 3vmin !important;
+    margin: 0 1%;
+}
+
+.pop-up-content form input, textarea {
+    background: rgba(12, 12, 12, 0.51);
+    border: none;
+    width: 85%;
+    height: 35px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.scrollable-div {
+    overflow-y: scroll;
+}
+
+    .scrollable-div::-webkit-scrollbar-track {
+        webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+          border-radius: 10px;
+        background-color: #987C7D;
+    }
+
+    .scrollable-div::-webkit-scrollbar {
+        width: 10px;
+        background-color: #907576;
+    }
+
+    .scrollable-div::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #4B3F41;
+    }
 
 
 
@@ -368,18 +423,36 @@
         font-size: 3.0vh;
     }
 
-    .md-content h3 {
+    /*.md-content h3 {
         font-size: 5vw;
-    }
+    }*/
 
     .md-content > div {
         font-size: 2vh;
     }
 
-    .google-map {
+    /*.google-map {
         margin: 5%;
         width: 90%;
         height: 60%;
         float: left;
+    }*/
+
+    .md-content-left {
+        position: absolute;
+        left: 0%;
+        top: 50%;
+        width: 100%;
+        height: 45%;
+        overflow-y: scroll;
+    }
+
+    .md-content-right {
+        /*border: 1px solid #131212;*/
+        position: absolute;
+        top: 0;
+        left: 0%;
+        width: 100%;
+        height: 45%;
     }
 }

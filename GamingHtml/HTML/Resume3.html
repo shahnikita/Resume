@@ -83,72 +83,84 @@
 
     <div class="md-modal md-effect-17 projects-content" id="projects">
         <div class="md-content">
-            <h3>Modal Dialog <span class="close"></span></h3>
-            <div>
-                <p>This is a modal window. You can do the following things with it:</p>
-                <ul>
-                    <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                    <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                    <li><strong>Close:</strong> click on the button below to close the modal.</li>
-                </ul>
-                <button class="md-close" id="Button3">Close me!</button>
+            <!--header-->
+            <h3>Projects Taken<span class="close"></span></h3>
+            <!--Content-->
+            <div class="scrollable-div">
             </div>
         </div>
     </div>
 
     <div class="md-modal md-effect-17 contact-content" id="contact">
         <div class="md-content">
-            <h3>Modal Dialog <span class="close"></span></h3>
+            <!--header-->
+            <h3>Contact <span class="close"></span></h3>
+            <!--Content-->
+            <div>
+                <div class="md-content-left scrollable-div">
+                    <div class="pop-up">
+                        <span class="pop-up-header">Available on Social Networks      
+                        </span>
+                        <div class="pop-up-content">
+                            <i class="fa fa-facebook-square fa-2x font-icon-size"></i>
+                            <i class="fa fa-linkedin-square fa-2x font-icon-size"></i>
+                            <i class="fa fa-github-square fa-2x font-icon-size"></i>
+                            <i class="fa fa-skype fa-2x font-icon-size"></i>
+                        </div>
 
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238366.4897025642!2d73.03300029303715!3d22.32204248029837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc8ab91a3ddab%3A0xac39d3bfe1473fb8!2sVadodara%2C+Gujarat!5e1!3m2!1sen!2sin!4v1462527018447" class="google-map"></iframe>
+                    </div>
+                    <div class="pop-up">
+                        <span class="pop-up-header">
+                            <i class="fa fa-home fa-2x font-icon-size"></i>
+                            Address
+                        </span>
+                        <p class="pop-up-content">
+                            234, London Street, EL10 6 BG
+                        </p>
+                    </div>
+                    <div class="pop-up">
+                        <span class="pop-up-header">
+                            <i class="fa fa-phone fa-2x font-icon-size"></i>
+                            Phone
+                        </span>
+                        <p class="pop-up-content">
+                            +61 3 8376 6284
+                        </p>
 
-            <div class="pop-up">
+                    </div>
+                    <div class="pop-up">
+                        <span class="pop-up-header">
+                            <i class="fa fa-envelope fa-2x font-icon-size"></i>
+                            Email
+                        </span>
+                        <p class="pop-up-content">
+                            test@test.com
+                        </p>
 
-                <p class="pop-up-header">
-                    Available on Social Networks
-                   
-                </p>
-                <p class="pop-up-content">
-                    <i class="fa fa-facebook-square fa-2x"></i>
-                    <i class="fa fa-linkedin-square fa-2x"></i>
-                    <i class="fa fa-github-square fa-2x"></i>
-                    <i class="fa fa-skype fa-2x"></i>
-                </p>
+                    </div>
 
+                    <div class="pop-up">
+                        <span class="pop-up-header">
+                            <i class="fa fa-paper-plane fa-2x font-icon-size" aria-hidden="true"></i>
+                            Drop Me a Line
+                        </span>
+                        <div class="pop-up-content">
+                            <form>
+                                <input name="name" type="text" id="name" placeholder="Your Name..." />
+                                <input name="mail" type="text" id="mail" placeholder="Email Address..." />
+                                <input name="company" type="text" id="company" placeholder="Company Name..." />
+                                <textarea tabindex="4" rows="10" cols="58" name="comment" placeholder="Your Message..." style="height: 70px;"></textarea>
 
-                <p class="pop-up-header">
-                    <!--  <img src="/Images/Test/home.png" class="home" alt="Address" />-->
-                    <i class="fa fa-home fa-1x"></i>
-                    Address
-                </p>
-                <p class="pop-up-content">
-                    234, London Street, EL10 6 BG
-                </p>
+                                <input tabindex="5" type="submit" value="Submit" style="width: 25%;" />
+                            </form>
+                        </div>
 
-                <p class="pop-up-header">
-                    <!-- <img src="/Images/Test/phone.png" class="home" alt="Address" />-->
-                    <i class="fa fa-phone fa-1x"></i>
-                    Phone
-                </p>
-                <p class="pop-up-content">
-                    +61 3 8376 6284
-                </p>
-                <p class="pop-up-header">
-                    <!-- <img src="/Images/Test/mail.png" class="home" alt="Address" />-->
-                    <i class="fa fa-envelope fa-1x"></i>
-                    Email
-                </p>
-                <p class="pop-up-content">
-                    test@test.com
-                </p>
-                <br />
-                <p class="pop-up-header">
-                    Drop Me a Line
-                </p>
+                    </div>
 
-                <p class="pop-up-content">
-                    <input name="name" type="text" id="name" placeholder="Your Name...">
-                </p>
+                </div>
+                <div class="md-content-right">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238366.4897025642!2d73.03300029303715!3d22.32204248029837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc8ab91a3ddab%3A0xac39d3bfe1473fb8!2sVadodara%2C+Gujarat!5e1!3m2!1sen!2sin!4v1462527018447" class="google-map"></iframe>
+                </div>
             </div>
         </div>
     </div>
@@ -166,7 +178,7 @@
             $(this).toggleClass("tiles-hover");
         }
         function clickTile() {
-            $(".container").addClass("container-rotate");
+            //  $(".container").addClass("container-rotate");
             $("body").addClass("md-perspective");
             $(".tiles").removeClass("tiles-hover");
             $(".tiles").off("hover");
@@ -184,7 +196,7 @@
 
         //model close
         $(".md-close, .close").on("click", function () {
-            $(".container").removeClass("container-rotate");
+            //    $(".container").removeClass("container-rotate");
             $("body").removeClass("md-perspective");
             $(this).closest('.md-effect-17').removeClass("md-show");
             $(".tiles").on("hover", toggleTileHoverClass);
