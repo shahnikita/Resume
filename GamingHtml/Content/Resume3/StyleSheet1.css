@@ -270,16 +270,16 @@ html, body {
             padding: 10px 0;
         }*/
 
-.md-content > div ul {
+/*.md-content > div ul {
     padding: 3% 2%;
     margin: 0;
     font-size: 1.2vw;
     list-style: none;
-}
+}*/
 
-    .md-content > div ul li {
+/*.md-content > div ul li {
         padding: 5px 0;
-    }
+    }*/
 
 .md-content button {
     display: block;
@@ -334,6 +334,21 @@ html, body {
     perspective: 600px;
 }
 
+.profile-img {
+    width: 85%;
+    height: 80%;
+     margin: 2.5%;
+}
+
+.profile-head {
+    color: #FDC2BC;
+    font-size:4.5vmin!important;
+    /*font-weight: bold;*/
+}
+.profile-head-1 {
+    color: #F7D3AE;
+    font-size: 3vmin!important;
+}
 
 /*Google map*/
 .google-map {
@@ -385,7 +400,7 @@ html, body {
 
     .scrollable-div::-webkit-scrollbar-track {
         webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-          border-radius: 10px;
+        border-radius: 10px;
         background-color: #987C7D;
     }
 
@@ -429,6 +444,7 @@ html, body {
 
     .md-content > div {
         font-size: 2vh;
+        height: 90%;
     }
 
     /*.google-map {
@@ -440,19 +456,18 @@ html, body {
 
     .md-content-left {
         position: absolute;
-        left: 0%;
-        top: 50%;
-        width: 100%;
-        height: 45%;
-        overflow-y: scroll;
-    }
-
-    .md-content-right {
-        /*border: 1px solid #131212;*/
-        position: absolute;
         top: 0;
         left: 0%;
         width: 100%;
         height: 45%;
+    }
+
+    .md-content-right {
+        position: absolute;
+        left: 0%;
+        top: 50%;
+        width: 100%;
+        height: 45%;
+        /*border: 1px solid #131212;*/
     }
 }
