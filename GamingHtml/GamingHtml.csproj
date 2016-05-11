@@ -189,6 +189,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\jquery.circliful.css" />
     <Content Include="Content\Resume1\StyleSheet1.css" />
     <Content Include="Content\Resume2\StyleSheet1.css" />
     <Content Include="Content\Resume3\StyleSheet1.css" />
@@ -319,6 +320,7 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.circliful.min.js" />
     <Content Include="Scripts\jquery.signalR-1.1.4.js" />
     <Content Include="Scripts\jquery.signalR-1.1.4.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />

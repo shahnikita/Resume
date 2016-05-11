@@ -1,10 +1,10 @@
-﻿@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+﻿/*@import url(http://fonts.googleapis.com/css?family=Open+Sans);*/
 
 html, body {
     width: 100%;
     margin: 0px;
     height: 100%;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     font-weight: normal;
     -webkit-font-smoothing: antialiased!important;
 }
@@ -18,7 +18,8 @@ html, body {
 
 .tiles {
     margin: 0;
-    width: 20%;
+    /*width: 20%;*/
+    width: 25%;
     height: 100%;
     float: left;
     background-position: center center;
@@ -211,12 +212,13 @@ html, body {
     border-radius: 3px;
     margin: 0 auto;
     color: #fff;
-    background: #578AA9;
-    background: -webkit-linear-gradient(#578AA9, hsla(152, 10%, 51%, 0.61));
-    background: -o-linear-gradient(#578AA9, hsla(152, 10%, 51%, 0.61));
-    background: -moz-linear-gradient(#578AA9, hsla(152, 10%, 51%, 0.61));
+    background: #2A2545;
+    background: -webkit-linear-gradient(#2A2545,rgba(198, 163, 157, 0.84));
+    background: -o-linear-gradient(#2A2545, rgba(198, 163, 157, 0.84));
+    background: -moz-linear-gradient(#2A2545, rgba(198, 163, 157, 0.84));
     /*background: linear-gradient(#578AA9, hsla(152, 10%, 51%, 0.61));*/
     background: linear-gradient(#2A2545, rgba(198, 163, 157, 0.84));
+    /*background:linear-gradient(#040942, rgba(50, 43, 69, 0));*/
     width: 100%;
     height: 100%;
 }
@@ -259,27 +261,7 @@ html, body {
     height: 100%;
     width: 45%;
 }
-/*.md-content > div {
-        padding: 5%;
-        margin: 0;
-        font-size: 2vw;
-    }*/
 
-/*.md-content > div p {
-            margin: 0;
-            padding: 10px 0;
-        }*/
-
-/*.md-content > div ul {
-    padding: 3% 2%;
-    margin: 0;
-    font-size: 1.2vw;
-    list-style: none;
-}*/
-
-/*.md-content > div ul li {
-        padding: 5px 0;
-    }*/
 
 .md-content button {
     display: block;
@@ -293,6 +275,7 @@ html, body {
     overflow: hidden;
     -webkit-transition: -webkit-transform 0.4s;
     -moz-transition: -moz-transform 0.4s;
+    -o-transition: transform 0.4s;
     transition: transform 0.4s;
 }
 
@@ -419,7 +402,8 @@ html, body {
 
 @media screen and (max-width: 720px) {
     .tiles {
-        height: 20%;
+        /*height: 20%;*/
+         height: 25%;
         width: 100%;
     }
 
