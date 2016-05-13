@@ -193,6 +193,7 @@
     <Content Include="Content\Resume1\StyleSheet1.css" />
     <Content Include="Content\Resume2\StyleSheet1.css" />
     <Content Include="Content\Resume3\StyleSheet1.css" />
+    <Content Include="Content\Resume4\StyleSheet1.css" />
     <Content Include="Content\StyleSheet1.css" />
     <Content Include="Content\themes\StyleSheet1.css" />
     <Content Include="Content\themes\test.css" />
@@ -210,6 +211,13 @@
     <Content Include="HTML\Test.html" />
     <Content Include="HTML\test1.html" />
     <Content Include="HTML\Test2.html" />
+    <Content Include="Images\Background\apple-gear-looking-pretty.jpg" />
+    <Content Include="Images\Background\photo-1417733403748-83bbc7c05140.jpg" />
+    <Content Include="Images\Background\photo-1429051883746-afd9d56fbdaf.jpg" />
+    <Content Include="Images\Background\photo-1430165558479-de3cf8cf1478.jpg" />
+    <Content Include="Images\Background\photo-1453060113865-968cea1ad53a.jpg" />
+    <Content Include="Images\Background\photo-1454165205744-3b78555e5572.jpg" />
+    <Content Include="Images\Background\photo-1455758662748-ce95345b13c6.jpg" />
     <Content Include="Images\Mario\background.png" />
     <Content Include="Content\circle.png" />
     <Content Include="Content\download.png" />
@@ -270,6 +278,10 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Images\Mario\sprite.png" />
+    <Content Include="Images\Resume4\briefcase-512.png" />
+    <Content Include="Images\Resume4\contacts-512.png" />
+    <Content Include="Images\Resume4\profle-512.png" />
+    <Content Include="Images\Resume4\tools-512.png" />
     <Content Include="Images\Resume\back1.jpg" />
     <Content Include="Images\Resume\back2.jpg" />
     <Content Include="Images\Resume\back3.jpg" />

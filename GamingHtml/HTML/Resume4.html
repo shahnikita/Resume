@@ -2,8 +2,101 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
+    <link href="../Content/Resume4/StyleSheet1.css" rel="stylesheet" />
+    <link href="../css/font-awesome.min.css" rel="stylesheet" />
+
 </head>
 <body>
+    <div class="container">
+        <div class="header"></div>
 
+        <div class="content">
+            <div class="content-header">
+                <div class="circular-div summary" title="Profile" data-section="section-summary"></div>
+                <div class="circular-div skills" title="Skills" data-section="section-summary"></div>
+                <div class="circular-div experience" title="Experience" data-section="section-experience"></div>
+                <div class="circular-div project" title="Project" data-section="section-summary"></div>
+            </div>
+
+            <div class="border"></div>
+    
+            <div class="section" id="section-summary">
+                <span class="section-header">About Me</span>
+                <p class="section-content">
+                    As a highly motivated computer professional with the enthusiasm to accept new challenges, the opportunity to work as a software engineer.
+                        Having worked within the industry for over 2.5+year, started my career with .net MVC architecture have developed a wide range of skills that would meet, and exceed the expectations.
+                            Strong team-player, good problem-solver, quick learner, responsible, purposeful, punctual, cheerful, sociable and hard-working person.
+                        As I have started role as a  Software Engineer (.net developer) had many achievements, including development of a several projects for several clients of the company.
+                </p>
+                <img src="../Images/Test/signiture.png" alt="" />
+            </div>
+
+            <div class="section" id="section-skills"></div>
+
+            <div class="section" id="section-experience">
+                <span class="section-header">My Work</span>
+                <div class="section-content">
+                    <div style="margin: auto; float: left; width: 15%">2015 – Today</div>
+                    <div style="margin: auto; float: left; width: 80%;margin-bottom:2%">
+                        <p style="margin: 0;">
+                            <strong>Rangam Infotech Pvt Ltd,</strong>
+                            <br />
+                            Vadodara
+                             <br />
+                            Software Engineer
+                             <br />
+                            Responsible for developing website as per client requirement for analysis,design, implementation of code.
+                             <br />
+                            Perform Unit testing, created stored procedure And data migration.
+                            <br />
+                            Developed various website that include technologies like C#.Net, Visual Studio 2012, .Net Framework 4.5, SQL Server 2012,Windows Service, Entity Framework, HTML, CSS, Ajax, JavaScript, JQuery.                        </p>
+                    </div>
+
+
+                     <div style="margin: auto; float: left; width: 15%;">2013 – 2014</div>
+                    <div style="margin: auto; float: left; width: 80%;margin-bottom:2%">
+                        <p style="margin: 0;">
+                            <strong>Promact Infotech Pvt Ltd,</strong>
+                            <br />
+                            Vadodara
+                             <br />
+                            Software Engineer
+                             <br />
+                            Responsible for developing website as per client requirement for analysis,design, implementation of code.
+                             <br />
+                            Perform Unit testing, created stored procedure And data migration.
+                            <br />
+                            Developed various website that include technologies like C#.Net, Visual Studio 2012, .Net Framework 4.5, SQL Server 2012,Windows Service, Entity Framework, HTML, CSS, Ajax, JavaScript, JQuery.                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="section" id="section-project"></div>-->
+        </div>
+    </div>
+
+    <script src="../Scripts/jquery-1.7.1.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            function toggleHeaderHoverClass() {
+                $(this).toggleClass("circular-div-hover");
+            }
+
+            setTimeout(function () {
+                $("#section-summary").addClass("section-display");
+            }, 200);
+
+            $(".circular-div").on("hover", toggleHeaderHoverClass);
+            $(".circular-div").on("click", function () {
+                $(".section").each(function (index, ele) {
+                    $(ele).removeClass("section-display");
+                });
+                var sname ="#"+ $(this).data("section");
+                $(sname).addClass("section-display");
+            });
+
+        });
+    </script>
 </body>
 </html>
