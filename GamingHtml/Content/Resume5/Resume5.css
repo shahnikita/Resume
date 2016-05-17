@@ -1,0 +1,461 @@
+﻿/*@import url(http://fonts.googleapis.com/css?family=Open+Sans);*/
+
+html, body {
+    width: 100%;
+    margin: 0px;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased!important;
+}
+
+.container {
+    width: 100%;
+    margin: 0px;
+    height: 100%;
+    background-color: rgb(19, 18, 18);
+}
+
+.tiles {
+    
+    width: 50%;
+    height: 50%;
+    float: left;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    margin: auto;
+  
+}
+
+.tile-1 {
+    /*background-image: url(../../Images/Test/1.jpg);*/
+    background-image: url(../../Images/Background/apple-gear-looking-pretty.jpg);
+}
+
+.tile-2 {
+    /*background-image: url(../../Images/Test/2.jpg);*/
+    background-image: url(../../Images/Background/photo-1453060113865-968cea1ad53a.jpg);
+}
+
+.tile-3 {
+    /*background-image: url(../../Images/Test/bridge.jpg);*/
+    background-image: url(../../Images/Background/photo-1454165205744-3b78555e5572.jpg);
+}
+
+.tile-4 {
+    background-image: url(../../Images/Test/4.jpg);
+}
+
+.tile-5 {
+    /*background-image: url(../../Images/Test/5.jpg);*/
+    background-image: url(../../Images/Background/photo-1430165558479-de3cf8cf1478.jpg);
+}
+
+.tiles-hover {
+   
+}
+
+.icn-profile {
+    max-width: 45%;
+    position: relative;
+    top: 50%;
+    left: 25%;
+    opacity: 0.5;
+    -moz-transition: opacity .3s ease-out;
+    -o-transition: opacity .3s ease-out;
+    -webkit-transition: opacity .3s ease-out;
+    transition: opacity .3s ease-out;
+}
+
+.head-text {
+    max-width: 20%;
+    position: relative;
+    left: 25%;
+    top: 5%;
+    /*font-size: 2.5em;*/
+    font-size: 2.5vw;
+    opacity: 0;
+    -moz-transition: opacity .3s ease-out;
+    -o-transition: opacity .3s ease-out;
+    -webkit-transition: opacity .3s ease-out;
+    transition: opacity .3s ease-out;
+    color: white;
+}
+
+
+.tiles-hover .head-text{
+    opacity: 1;
+}
+
+.profile-txt {
+    /*color: #4B5152;*/
+    color: white;
+}
+
+.education-txt {
+    /*color: #71616C;*/
+    color: #D4A6C6;
+}
+
+.experince-txt {
+    /*color: hsla(349, 76%, 66%, 0.77);*/
+    /*color:#E47A8E;*/
+    color: #BBD5FD;
+}
+
+.project-txt {
+    /*color: #A9ECD1;*/
+    color: #0AF1BD;
+}
+
+.contact-txt {
+    /*color: #F5B680;*/
+    color: #E26A02;
+}
+
+.tiles-hover .icn-profile {
+    opacity: 0.7;
+    transform: scale(1.5);
+}
+
+.tiles-hover .head-text {
+    opacity: 1;
+}
+
+
+
+
+/*Pop up css*/
+
+
+/*pop up close*/
+.close:before {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    content: "X";
+    float: right;
+}
+
+
+.md-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /*-webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);*/
+    height: 100%;
+}
+
+.md-show {
+    visibility: visible;
+}
+
+
+
+
+
+/* Content styles */
+
+
+/*.profile-content {
+    color: #fff;
+    background: #578AA9; 
+    background: -webkit-linear-gradient(#578AA9, hsla(152, 10%, 51%, 0.61)); 
+    background: -o-linear-gradient(#578AA9, hsla(152, 10%, 51%, 0.61));
+    background: -moz-linear-gradient(#578AA9, hsla(152, 10%, 51%, 0.61));
+    background: linear-gradient(#578AA9, hsla(152, 10%, 51%, 0.61)); 
+}
+
+.education-content {
+    color: #fff;
+    background: #F5BCB1; 
+    background: -webkit-linear-gradient(#F5BCB1, rgba(63, 81, 181, 0.14));
+    background: -o-linear-gradient(#F5BCB1, rgba(63, 81, 181, 0.14)); 
+    background: -moz-linear-gradient(#F5BCB1, rgba(63, 81, 181, 0.14));
+    background: linear-gradient(#F5BCB1, rgba(63, 81, 181, 0.14)); 
+}
+
+.experience-content {
+    color: #fff;
+    background: #ADC0E8; 
+    background: -webkit-linear-gradient(#ADC0E8, rgba(119, 106, 80, 0.71));
+    background: -o-linear-gradient(#ADC0E8, rgba(119, 106, 80, 0.71)); 
+    background: -moz-linear-gradient(#7A9BE0, rgba(119, 106, 80, 0.71)); 
+    background: linear-gradient(#ADC0E8, rgba(119, 106, 80, 0.71));  
+}
+
+.projects-content {
+    color: #fff;
+    background: #74E4E4; 
+    background: -webkit-linear-gradient(#74E4E4, rgba(136, 114, 58, 0.54)); 
+    background: -o-linear-gradient(#74E4E4,rgba(136, 114, 58, 0.54));
+    background: -moz-linear-gradient(#74E4E4, rgba(136, 114, 58, 0.54)); 
+    background: linear-gradient(#74E4E4, rgba(136, 114, 58, 0.54)); 
+}
+
+.contact-content {
+    color: #fff;
+    background: #54574E; 
+    background: -webkit-linear-gradient( #54574E,rgba(246, 239, 233, 0.7)); 
+    background: -o-linear-gradient( #54574E,rgba(246, 239, 233, 0.7)); 
+    background: -moz-linear-gradient( #54574E,rgba(246, 239, 233, 0.7)); 
+    background: linear-gradient( #54574E,rgba(246, 239, 233, 0.7)); 
+}*/
+
+
+.md-content {
+    position: relative;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin: 0 auto;
+    color: #fff;
+    background: #2A2545;
+    background: -webkit-linear-gradient(#2A2545,rgba(198, 163, 157, 0.84));
+    background: -o-linear-gradient(#2A2545, rgba(198, 163, 157, 0.84));
+    background: -moz-linear-gradient(#2A2545, rgba(198, 163, 157, 0.84));
+    /*background: linear-gradient(#578AA9, hsla(152, 10%, 51%, 0.61));*/
+    background: linear-gradient(#2A2545, rgba(198, 163, 157, 0.84));
+    /*background:linear-gradient(#040942, rgba(50, 43, 69, 0));*/
+    width: 100%;
+    height: 100%;
+}
+    /*header*/
+    .md-content h3 {
+        margin: 0;
+        padding: 2.5% 1.8% 1.5% 0;
+        text-align: center;
+        font-size: 4.5vmin;
+        font-weight: normal;
+        background: rgba(0,0,0,0.1);
+        -moz-border-radius: 3px 3px 0 0;
+        -webkit-border-radius: 3px 3px 0 0;
+        border-radius: 3px 3px 0 0;
+    }
+    /*content*/
+    .md-content > div {
+        padding: 1.5%;
+        margin: 0;
+        /*border: 1px solid #131212;*/
+        width: 97%;
+        height: 75%;
+        position: relative;
+        top: 0%;
+        left: 0%;
+    }
+
+.md-content-left {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 45%;
+}
+
+.md-content-right {
+    /*border: 1px solid #131212;*/
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    height: 100%;
+    width: 45%;
+}
+
+
+.md-content button {
+    display: block;
+    margin: 0 auto;
+    font-size: 0.8em;
+}
+
+/* Effect 17:  Slide in from bottom with perspective on container */
+.md-show.md-effect-17 ~ .container {
+    height: 100%;
+    overflow: hidden;
+    -webkit-transition: -webkit-transform 0.4s;
+    -moz-transition: -moz-transform 0.4s;
+    -o-transition: transform 0.4s;
+    transition: transform 0.4s;
+}
+
+.container-rotate {
+    -webkit-transform: rotateX(-2deg);
+    -moz-transform: rotateX(-2deg);
+    -ms-transform: rotateX(-2deg);
+    transform: rotateX(-2deg);
+    -webkit-transform-origin: 50% 0%;
+    -moz-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.md-effect-17 .md-content {
+    opacity: 0;
+    /*transform: translateY(200%);*/
+    -moz-transform: rotateX(-70deg);
+    -ms-transform: rotateX(-70deg);
+    -o-transform: rotateX(-70deg);
+    -webkit-transform: rotateX(-70deg);
+    transform: rotateX(-70deg);
+}
+
+.md-show.md-effect-17 .md-content {
+    transform: rotateX(0deg);
+    opacity: 1;
+    transition: all 0.3s 0.2s;
+}
+
+.md-perspective,
+.md-perspective body {
+    background: #222;
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+    -ms-perspective: 600px;
+    perspective: 600px;
+}
+
+.profile-img {
+    width: 85%;
+    height: 80%;
+    margin: 2.5%;
+}
+
+.profile-head {
+    color: #FDC2BC;
+    font-size: 4.5vmin!important;
+    /*font-weight: bold;*/
+}
+
+.profile-head-1 {
+    color: #F7D3AE;
+    font-size: 3vmin!important;
+}
+
+/*Google map*/
+.google-map {
+    border: 0;
+    width: 95%;
+    height: 98%;
+    margin: 2.5%;
+    /*padding-top: 2%;*/
+}
+
+.pop-up {
+    margin: 0%;
+    padding: 2%;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.pop-up-header {
+    font-size: 3vmin;
+    border-bottom: 1.5px dashed #fff;
+}
+
+.pop-up-content {
+    font-size: 2.5vmin;
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+}
+
+/*set font for icon*/
+.font-icon-size {
+    font-size: 3vmin !important;
+    margin: 0 1%;
+}
+
+.pop-up-content form input, textarea {
+    background: rgba(12, 12, 12, 0.51);
+    border: none;
+    width: 85%;
+    height: 35px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.scrollable-div {
+    overflow-y: auto;
+}
+
+    .scrollable-div::-webkit-scrollbar-track {
+        webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        background-color: #987C7D;
+    }
+
+    .scrollable-div::-webkit-scrollbar {
+        width: 10px;
+        background-color: #907576;
+    }
+
+    .scrollable-div::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #4B3F41;
+    }
+
+
+
+@media screen and (max-width: 720px) {
+    .tiles {
+        /*height: 20%;*/
+        height: 25%;
+        width: 100%;
+    }
+
+    .icn-profile {
+        max-height: 40%;
+        position: relative;
+        top: 15%;
+        left: 15%;
+    }
+
+    .head-text {
+        max-height: 20%;
+        position: relative;
+        left: 70%;
+        top: 35%;
+        font-size: 3.0vh;
+    }
+
+    /*.md-content h3 {
+        font-size: 5vw;
+    }*/
+
+    .md-content > div {
+        font-size: 2vh;
+        height: 90%;
+    }
+
+    .md-content-left {
+        position: absolute;
+        top: 0;
+        left: 0%;
+        width: 100%;
+        height: 45%;
+    }
+
+    .md-content-right {
+        position: absolute;
+        left: 0%;
+        top: 50%;
+        width: 100%;
+        height: 45%;
+        /*border: 1px solid #131212;*/
+    }
+}

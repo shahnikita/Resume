@@ -194,6 +194,10 @@
     <Content Include="Content\Resume2\StyleSheet1.css" />
     <Content Include="Content\Resume3\StyleSheet1.css" />
     <Content Include="Content\Resume4\StyleSheet1.css" />
+    <Content Include="Content\Resume6\component.css" />
+    <Content Include="Content\Resume6\demo.css" />
+    <Content Include="Content\Resume6\normalize.css" />
+    <Content Include="Content\Resume5\Resume5.css" />
     <Content Include="Content\StyleSheet1.css" />
     <Content Include="Content\themes\StyleSheet1.css" />
     <Content Include="Content\themes\test.css" />
@@ -202,12 +206,14 @@
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="HTML\Resume5.html" />
     <Content Include="HTML\HtmlPage1.html" />
     <Content Include="HTML\PopUp.html" />
     <Content Include="HTML\Resume1.html" />
     <Content Include="HTML\Resume2.html" />
     <Content Include="HTML\Resume3.html" />
     <Content Include="HTML\Resume4.html" />
+    <Content Include="HTML\Resume6.html" />
     <Content Include="HTML\Test.html" />
     <Content Include="HTML\test1.html" />
     <Content Include="HTML\Test2.html" />
@@ -326,6 +332,7 @@
     <Content Include="Scripts\Custom\index.js" />
     <Content Include="Scripts\Custom\Resume.js" />
     <Content Include="Scripts\Custom\Resume2.js" />
+    <Content Include="Scripts\Custom\Resume5.js" />
     <Content Include="Scripts\Custom\test.js" />
     <Content Include="Scripts\Custom\test2.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />

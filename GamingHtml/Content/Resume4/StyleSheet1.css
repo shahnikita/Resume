@@ -221,7 +221,7 @@ html, body {
 .section-content {
     font-size: 20px;
     margin: 1%;
-    overflow-y: scroll;
+    /*overflow-y: auto;*/
 }
 
 @keyframes dropContent {

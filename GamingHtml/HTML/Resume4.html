@@ -19,7 +19,7 @@
             </div>
 
             <div class="border"></div>
-    
+
             <div class="section" id="section-summary">
                 <span class="section-header">About Me</span>
                 <p class="section-content">
@@ -31,13 +31,13 @@
                 <img src="../Images/Test/signiture.png" alt="" />
             </div>
 
-            <div class="section" id="section-skills"></div>
+            <div class="section" id="section-skills">skill</div>
 
             <div class="section" id="section-experience">
                 <span class="section-header">My Work</span>
                 <div class="section-content">
                     <div style="margin: auto; float: left; width: 15%">2015 – Today</div>
-                    <div style="margin: auto; float: left; width: 80%;margin-bottom:2%">
+                    <div style="margin: auto; float: left; width: 80%; margin-bottom: 2%">
                         <p style="margin: 0;">
                             <strong>Rangam Infotech Pvt Ltd,</strong>
                             <br />
@@ -49,12 +49,13 @@
                              <br />
                             Perform Unit testing, created stored procedure And data migration.
                             <br />
-                            Developed various website that include technologies like C#.Net, Visual Studio 2012, .Net Framework 4.5, SQL Server 2012,Windows Service, Entity Framework, HTML, CSS, Ajax, JavaScript, JQuery.                        </p>
+                            Developed various website that include technologies like C#.Net, Visual Studio 2012, .Net Framework 4.5, SQL Server 2012,Windows Service, Entity Framework, HTML, CSS, Ajax, JavaScript, JQuery.                       
+                        </p>
                     </div>
 
 
-                     <div style="margin: auto; float: left; width: 15%;">2013 – 2014</div>
-                    <div style="margin: auto; float: left; width: 80%;margin-bottom:2%">
+                    <div style="margin: auto; float: left; width: 15%;">2013 – 2014</div>
+                    <div style="margin: auto; float: left; width: 80%; margin-bottom: 2%">
                         <p style="margin: 0;">
                             <strong>Promact Infotech Pvt Ltd,</strong>
                             <br />
@@ -66,12 +67,14 @@
                              <br />
                             Perform Unit testing, created stored procedure And data migration.
                             <br />
-                            Developed various website that include technologies like C#.Net, Visual Studio 2012, .Net Framework 4.5, SQL Server 2012,Windows Service, Entity Framework, HTML, CSS, Ajax, JavaScript, JQuery.                        </p>
+                            Developed various website that include technologies like C#.Net, Visual Studio 2012, .Net Framework 4.5, SQL Server 2012,Windows Service, Entity Framework, HTML, CSS, Ajax, JavaScript, JQuery.                       
+                        </p>
                     </div>
                 </div>
 
             </div>
-            <div class="section" id="section-project"></div>-->
+            <div class="section" id="section-project">project</div>
+            
         </div>
     </div>
 
@@ -79,23 +82,77 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
+
+
+            var curPage = 0;
+            var numOfPages = $(".section").length-1;
+            var animTime = 150;
+            var scrolling = false;
+            var pgPrefix = "section-";
+            var pagename=["summary","skills","experience","project"]
+
             function toggleHeaderHoverClass() {
                 $(this).toggleClass("circular-div-hover");
             }
 
             setTimeout(function () {
                 $("#section-summary").addClass("section-display");
-            }, 200);
+            }, animTime);
 
             $(".circular-div").on("hover", toggleHeaderHoverClass);
             $(".circular-div").on("click", function () {
                 $(".section").each(function (index, ele) {
                     $(ele).removeClass("section-display");
                 });
-                var sname ="#"+ $(this).data("section");
+                var sname = "#" + $(this).data("section");
                 $(sname).addClass("section-display");
             });
 
+
+
+            function pagination() {
+                scrolling = true;
+                //remove 
+                $(".section").each(function (index, ele) {
+                    $(ele).removeClass("section-display");
+                });
+                var a = "#" + pgPrefix + pagename[curPage];
+                $(a).addClass("section-display");
+
+                setTimeout(function () {
+                    scrolling = false;
+                }, animTime);
+            };
+
+            function navigateUp() {
+                if (curPage === 0) return;
+                curPage--;
+                pagination();
+            };
+
+            function navigateDown() {
+                if (curPage === numOfPages) return;
+                curPage++;
+                pagination();
+            };
+
+            $(document).on("mousewheel DOMMouseScroll", function (e) {
+                if (scrolling) return;
+                if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+                    navigateUp();
+                } else {
+                    navigateDown();
+                }
+            });
+
+            $(document).on("keydown", function (e) {
+                if (scrolling) return;
+                if (e.which === 38) {
+                    navigateUp();
+                } else if (e.which === 40) {
+                    navigateDown();
+                }
+            });
         });
     </script>
 </body>
