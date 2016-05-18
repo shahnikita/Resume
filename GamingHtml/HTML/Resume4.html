@@ -8,15 +8,22 @@
 </head>
 <body>
     <div class="container">
-        <div class="header"></div>
-
-        <div class="content">
+        <div class="header">
+            <div class="header-text">
+                <span>GEORGE HANSON</span>
+            </div>
             <div class="content-header">
+                
                 <div class="circular-div summary" title="Profile" data-section="section-summary"></div>
                 <div class="circular-div skills" title="Skills" data-section="section-summary"></div>
                 <div class="circular-div experience" title="Experience" data-section="section-experience"></div>
                 <div class="circular-div project" title="Project" data-section="section-summary"></div>
+                <div class="circular-div contact" title="Contact" data-section="section-contact"></div>
             </div>
+        </div>
+
+        <div class="content">
+
 
             <div class="border"></div>
 
@@ -74,7 +81,7 @@
 
             </div>
             <div class="section" id="section-project">project</div>
-            
+
         </div>
     </div>
 
@@ -85,11 +92,11 @@
 
 
             var curPage = 0;
-            var numOfPages = $(".section").length-1;
+            var numOfPages = $(".section").length - 1;
             var animTime = 150;
             var scrolling = false;
             var pgPrefix = "section-";
-            var pagename=["summary","skills","experience","project"]
+            var pagename = ["summary", "skills", "experience", "project"]
 
             function toggleHeaderHoverClass() {
                 $(this).toggleClass("circular-div-hover");

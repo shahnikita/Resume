@@ -189,6 +189,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\cross.png" />
     <Content Include="Content\jquery.circliful.css" />
     <Content Include="Content\Resume1\StyleSheet1.css" />
     <Content Include="Content\Resume2\StyleSheet1.css" />
@@ -286,6 +287,7 @@
     <Content Include="Images\Mario\sprite.png" />
     <Content Include="Images\Resume4\briefcase-512.png" />
     <Content Include="Images\Resume4\contacts-512.png" />
+    <Content Include="Images\Resume4\dev-512.png" />
     <Content Include="Images\Resume4\profle-512.png" />
     <Content Include="Images\Resume4\tools-512.png" />
     <Content Include="Images\Resume\back1.jpg" />
