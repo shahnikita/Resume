@@ -10,24 +10,24 @@
     <div class="container">
         <div class="tiles tile-1 tiles-hover " data-popup="profile">
             <h2 class="head-text profile-txt">Profile</h2>
-           <!-- <img src="../Images/Test/profile1.png" alt="" class="icn-profile" />-->
+            <!-- <img src="../Images/Test/profile1.png" alt="" class="icn-profile" />-->
 
         </div>
 
         <div class="tiles tile-2 tiles-hover" data-popup="education">
             <h2 class="head-text profile-txt">Skills</h2>
-<!--            <img src="../Images/Test/bookshelf-128.png" alt="" class="icn-profile" />-->
+            <!--            <img src="../Images/Test/bookshelf-128.png" alt="" class="icn-profile" />-->
         </div>
         <div class="tiles tile-3 tiles-hover" data-popup="experience">
             <h2 class="head-text profile-txt">Experience</h2>
             <!--<img src="../Images/Test/briefcase-128.png" alt="" class="icn-profile" />-->
         </div>
-       <!-- <div class="tiles tile-4" data-popup="projects">
+        <!-- <div class="tiles tile-4" data-popup="projects">
             <h2 class="head-text project-txt">Projects</h2>
             <img src="../Images/Test/dev-128.png" alt="" class="icn-profile" />
         </div>-->
         <div class="tiles tile-5 tiles-hover" data-popup="contact">
-          <h2 class="head-text profile-txt">Contact</h2>
+            <h2 class="head-text profile-txt">Contact</h2>
             <!--  <img src="../Images/Test/contacts-128.png" alt="" class="icn-profile" />-->
         </div>
 
@@ -64,13 +64,13 @@
             <div class="pop-up">
                 <span class="pop-up-header">Programming:</span>
             </div>
-             <div class="pop-up">
+            <div class="pop-up">
                 <span class="pop-up-header">Scripting:</span>
             </div>
-             <div class="pop-up">
+            <div class="pop-up">
                 <span class="pop-up-header">Programming Language</span>
             </div>
-             <div class="pop-up">
+            <div class="pop-up">
                 <span class="pop-up-header">Programming Language</span>
             </div>
         </div>
@@ -317,13 +317,13 @@
     $(document).ready(function () {
 
         function toggleTileHoverClass() {
-           // $(this).toggleClass("tiles-hover");
+            // $(this).toggleClass("tiles-hover");
         }
         function clickTile() {
             //  $(".container").addClass("container-rotate");
             $("body").addClass("md-perspective");
-          //  $(".tiles").removeClass("tiles-hover");
-          //  $(".tiles").off("hover");
+            //  $(".tiles").removeClass("tiles-hover");
+            //  $(".tiles").off("hover");
             $(".tiles").off("click");
             var mid = $(this).data("popup");
             $("#" + mid).addClass("md-show");
@@ -341,7 +341,7 @@
             //    $(".container").removeClass("container-rotate");
             $("body").removeClass("md-perspective");
             $(this).closest('.md-effect-17').removeClass("md-show");
-         //   $(".tiles").on("hover", toggleTileHoverClass);
+            //   $(".tiles").on("hover", toggleTileHoverClass);
             $(".tiles").on("click", clickTile);
         });
 

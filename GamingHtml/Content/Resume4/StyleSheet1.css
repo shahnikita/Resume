@@ -22,7 +22,7 @@ html, body {
     width: 100%;
     margin: 0;
     height: 100%;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 body {
@@ -151,7 +151,6 @@ body {
     top: 20%;
     /* border: 0.75em solid gray; */
     left: 9%;
-    
     padding-left: 1%;
     animation-name: dropHeader;
     animation-duration: 1s;
@@ -160,18 +159,18 @@ body {
 
 .content-header {
     position: relative;
-    width: 75%;
+    width: 100%;
     /* min-height: 25%; */
     /* padding: 0 12%; */
     height: 100%;
-    left: 0%;
+    left: 5%;
 }
 
 
 
 
 .header-text {
-    width: 25%;
+    width: 40%;
     margin: auto;
     float: left;
     height: 100%;
@@ -189,18 +188,20 @@ body {
     }
 
 .circular-div {
-    width: 100px;
-    height: 100px;
-    margin: auto 2%;
-    float: left;
+    width: 5.5%;
+    padding-bottom: 5.5%;
+    margin: auto 1%;
     position: relative;
-    left: 5%;
+    background-color: #eeeeee;
     border-radius: 50%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     transition: all 0.7s ease-in;
     border: 5.5px solid #eeeeee;
+    text-align: center;
+    display: inline-block;
+   top:5%;
 }
 
 .circular-div-hover {
@@ -249,7 +250,7 @@ body {
 .section-display {
     display: block;
     animation-name: dropContent;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
 }
 
 .section-header {
@@ -258,13 +259,15 @@ body {
 
 .section-content {
     font-size: 20px;
-    margin: 1%;
-    /*overflow-y: auto;*/
+    /* margin: 1%; */
+    /* overflow-y: auto; */
+    width: 100%;
+    height: 95%;
 }
 
 @keyframes dropContent {
     0% {
-        transform: translateY(600%);
+        transform: translateY(100%);
         visibility: hidden;
     }
 
@@ -276,4 +279,56 @@ body {
         transform: translateY(0);
         visibility: visible;
     }
+}
+
+
+
+.section-content-left {
+    float: left;
+    height: 100%;
+    width: 40%;
+}
+
+
+.section-content-right {
+    /*border: 1px solid #131212;*/
+    float: right;
+    height: 100%;
+    width: 55%;
+}
+
+/*Google map*/
+.google-map {
+    border: 0;
+    width: 95%;
+    height: 98%;
+    margin: 2.5%;
+    /*padding-top: 2%;*/
+}
+
+
+.pop-up-header {
+    font-size: 3vmin;
+    border-bottom: 1.5px dashed #fff;
+}
+
+.pop-up-content {
+    font-size: 2.5vmin;
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+}
+
+.font-icon-size {
+    font-size: 24px !important;
+    margin: 0 1%;
+}
+
+.pop-up-content form input, textarea {
+    background: rgba(12, 12, 12, 0.51);
+    border: none;
+    width: 85%;
+    height: 35px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    color: #fff;
 }

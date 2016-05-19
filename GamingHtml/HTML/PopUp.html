@@ -22,7 +22,7 @@
             $(function () {
                 $('.circlestat').circliful({
                     animationStep: 5,
-                    pointSize:45,
+                    pointSize: $('.circlestat').data("percent"),
                     percent: $('.circlestat').data("percent")
                 });
             });
