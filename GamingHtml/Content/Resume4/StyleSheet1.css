@@ -47,7 +47,7 @@ body {
     width: 100%;
     height: 16%;
     margin: 0;
-    padding-top: 1%;
+    /*padding-top: 1%;*/
     background-color: rgba(70, 67, 67, 0.66);
     /*background-color: rgba(166, 75, 75, 0.69);*/
     /*background: radial-gradient(rgba(150, 28, 28, 0.59), rgba(255, 192, 203, 0.65));*/
@@ -159,9 +159,9 @@ body {
 
 .content-header {
     position: relative;
-    width: 100%;
+    width: 50%;
     /* min-height: 25%; */
-    /* padding: 0 12%; */
+         padding: 0 27%;
     height: 100%;
     left: 5%;
 }
@@ -170,7 +170,7 @@ body {
 
 
 .header-text {
-    width: 40%;
+    width: 25%;
     margin: auto;
     float: left;
     height: 100%;
@@ -188,8 +188,8 @@ body {
     }
 
 .circular-div {
-    width: 5.5%;
-    padding-bottom: 5.5%;
+    width: 12.5%;
+    padding-bottom: 12.5%;
     margin: auto 1%;
     position: relative;
     background-color: #eeeeee;
@@ -201,7 +201,7 @@ body {
     border: 5.5px solid #eeeeee;
     text-align: center;
     display: inline-block;
-   top:5%;
+    top: 5%;
 }
 
 .circular-div-hover {
@@ -230,8 +230,10 @@ body {
     background-image: url(../../Images/Resume4/contacts-512.png);
 }
 
-
-
+.content-header-contact {
+    width: 25%;
+    float: right;
+}
 .section {
     /*color: white;*/
     /* margin-top: 2%; */
@@ -332,3 +334,49 @@ body {
     margin-bottom: 10px;
     color: #fff;
 }
+
+.skill {
+    /*text-align: center;*/
+    width: 25%;
+    margin: auto;
+    float: left;
+}
+
+    .skill span {
+        display: inline-block;
+        font-size: 2.6vmin;
+        font-weight: bold;
+    }
+
+.sub-skill {
+    height: 30%;
+}
+
+.sub-skill-content {
+    overflow: auto;
+    overflow-y: hidden;
+    height: 100%;
+    float: left;
+    width:100%;
+}
+
+.skill-circle {
+    width: 40%;
+}
+
+/*.sub-skill {
+    width: 33%;
+     height: 100%;
+     margin:auto;
+     display:inline-block;
+}
+
+.skill-content {
+    font-size: 20px;  
+    height: 95%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap; 
+}*/
+
+
