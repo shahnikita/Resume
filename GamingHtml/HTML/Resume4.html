@@ -10,19 +10,21 @@
     <div class="container">
         <div class="header">
             <div class="header-text">
-                <span>GEORGE HANSON<!--NIKITA SHAH--></span>
+                <span>
+                    <!--GEORGE HANSON-->
+                    NIKITA SHAH</span>
             </div>
             <div class="content-header">
 
-                <div class="circular-div summary" title="Profile" data-section="summary"></div>
+                <div class="circular-div summary circular-div-select" title="Profile" data-section="summary"></div>
                 <div class="circular-div skills" title="Skills" data-section="skills"></div>
                 <div class="circular-div experience" title="Experience" data-section="experience"></div>
-                <div class="circular-div project" title="Project" data-section="summary"></div>
+                <div class="circular-div project" title="Project" data-section="project"></div>
                 <!--  <div class="circular-div contact" title="Contact" data-section="contact"></div>-->
             </div>
 
             <div class="content-header-contact">
-                <span style="font-weight: bold">Available on Social Networks :     
+                <span style="font-weight: bold;">Available on Social Networks :     
                 </span>
                 <p style="margin: 0;">
                     <i class="fa fa-facebook-square font-icon-size"></i>
@@ -31,13 +33,17 @@
                     <i class="fa fa-skype  font-icon-size"></i>
 
                 </p>
+
+
+                <span style="font-weight: bold">Email:shahnikita.1991@yahoo.com     
+                </span>
             </div>
         </div>
 
         <div class="content">
 
 
-            <div class="border"></div>
+
 
             <div class="section" id="section-summary">
                 <span class="section-header">About Me</span>
@@ -184,48 +190,50 @@
             <div class="section" id="section-experience">
                 <span class="section-header">Resume</span>
                 <div class="section-content">
-                    <div style="margin: auto; float: left; width: 15%">
-                        <i class="fa fa-calendar font-icon-size"></i>
-                        2015 – Today
-                    </div>
-                    <div style="margin: auto; float: left; width: 80%; margin-bottom: 2%">
-                        <p style="margin: 0;">
-                            <strong>Rangam Infotech Pvt Ltd,</strong>
+                    <div>
+                        <div class="resume-content-header">
+                            <i class="fa fa-calendar font-icon-size"></i>
+                            2015 – Today
+                        </div>
+                        <div style="margin: auto; width: 70%; margin-bottom: 2%">
+                            <p style="margin: 0;">
+                                <strong>Rangam Infotech Pvt Ltd,</strong>
+                                <br />
+                                Vadodara
+                             <br />
+                                Software Engineer
+                             <br />
+                                Responsible for developing website as per client requirement for analysis,design, implementation of code.
+                             <br />
+                                Perform Unit testing, created stored procedure And data migration.
                             <br />
-                            Vadodara
-                             <br />
-                            Software Engineer
-                             <br />
-                            Responsible for developing website as per client requirement for analysis,design, implementation of code.
-                             <br />
-                            Perform Unit testing, created stored procedure And data migration.
-                            <br />
-                            Developed various website that include technologies like C#.Net, Visual Studio 2012, .Net Framework 4.5, SQL Server 2012,Windows Service, Entity Framework, HTML, CSS, Ajax, JavaScript, JQuery.                       
-                        </p>
-                    </div>
+                                Developed various website that include technologies like C#.Net, Visual Studio 2012, .Net Framework 4.5, SQL Server 2012,Windows Service, Entity Framework, HTML, CSS, Ajax, JavaScript, JQuery.                       
+                            </p>
+                        </div>
 
-
-                    <div style="margin: auto; float: left; width: 15%;">
-                        <i class="fa fa-calendar font-icon-size"></i>
-                        2013 – 2014
                     </div>
-                    <div style="margin: auto; float: left; width: 80%; margin-bottom: 2%">
-                        <p style="margin: 0;">
-                            <strong>Promact Infotech Pvt Ltd,</strong>
+                    <div>
+                        <div class="resume-content-header">
+                            <i class="fa fa-calendar font-icon-size"></i>
+                            2013 – 2014
+                        </div>
+                        <div style="margin: auto; width: 70%; margin-bottom: 2%">
+                            <p style="margin: 0;">
+                                <strong>Promact Infotech Pvt Ltd,</strong>
+                                <br />
+                                Vadodara
+                             <br />
+                                Software Engineer
+                             <br />
+                                Responsible for developing website as per client requirement for analysis,design, implementation of code.
+                             <br />
+                                Perform Unit testing, created stored procedure And data migration.
                             <br />
-                            Vadodara
-                             <br />
-                            Software Engineer
-                             <br />
-                            Responsible for developing website as per client requirement for analysis,design, implementation of code.
-                             <br />
-                            Perform Unit testing, created stored procedure And data migration.
-                            <br />
-                            Developed various website that include technologies like C#.Net, Visual Studio 2012, .Net Framework 4.5, SQL Server 2012,Windows Service, Entity Framework, HTML, CSS, Ajax, JavaScript, JQuery.                       
-                        </p>
+                                Developed various website that include technologies like C#.Net, Visual Studio 2012, .Net Framework 4.5, SQL Server 2012,Windows Service, Entity Framework, HTML, CSS, Ajax, JavaScript, JQuery.                       
+                            </p>
+                        </div>
                     </div>
                 </div>
-
             </div>
             <div class="section" id="section-project">My Latest Work</div>
             <!--<div class="section" id="section-contact">
@@ -306,35 +314,32 @@
             var pgPrefix = "section-";
             var pagename = ["summary", "skills", "experience", "project"]
 
-            function toggleHeaderHoverClass() {
-                $(this).toggleClass("circular-div-hover");
-            }
-
             setTimeout(function () {
                 $("#section-summary").addClass("section-display");
             }, animTime);
 
-            $(".circular-div").on("hover", toggleHeaderHoverClass);
             $(".circular-div").on("click", function () {
-                //$(".section").each(function (index, ele) {
-                //    $(ele).removeClass("section-display");
-                //});
-                //var sname = "#" + $(this).data("section");
-                //$(sname).addClass("section-display");
                 curPage = pagename.indexOf($(this).data("section"));
                 pagination();
             });
 
-
-
             function pagination() {
+
+
                 scrolling = true;
                 //remove 
                 $(".section").each(function (index, ele) {
                     $(ele).removeClass("section-display");
                 });
+
+                $(".circular-div-select").each(function (index, ele) {
+                    $(ele).removeClass("circular-div-select");
+                });
+
                 var a = "#" + pgPrefix + pagename[curPage];
                 $(a).addClass("section-display");
+
+                $("[data-section='" + pagename[curPage] + "']").addClass("circular-div-select");
 
                 if (pagename[curPage] === "skills") {
                     animateSkills();
@@ -342,18 +347,31 @@
                 setTimeout(function () {
                     scrolling = false;
                 }, animTime);
+
             };
 
             function navigateUp() {
-                if (curPage === 0) return;
-                curPage--;
-                pagination();
+                if ($(window).width() <= 875 || $(window).height() <= 650) {
+                   
+                }
+                else {
+                    if (curPage === 0) return;
+                    curPage--;
+                    pagination();
+                }
+                return;
             };
 
             function navigateDown() {
-                if (curPage === numOfPages) return;
-                curPage++;
-                pagination();
+                if ($(window).width() <= 875 || $(window).height() <= 650) {
+                   
+                }
+                else {
+                    if (curPage === numOfPages) return;
+                    curPage++;
+                    pagination();
+                }
+                return;
             };
 
             $(document).on("mousewheel DOMMouseScroll", function (e) {

@@ -26,20 +26,16 @@ html, body {
 }
 
 body {
-    /*background-image: url(../../Images/Background/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg);*/
     background-size: cover;
-    /*background-image: url(../../Images/Background/texture-wallpaper-preview-9.jpg);*/
-    /*background-image: url(../../Images/Background/photo-1421344424210-2db540391216.jpg);*/
-    /*background-image: url(../../Images/Background/photo-1444159759392-aeeb3d5851c1.jpg);*/
     background-image: url(../../Images/Background/001_paper_2872x2592_all-free-download.com.jpg);
 }
 
 .container {
     width: 100%;
     margin: 0;
-    height: 100%;
+    min-height: 100%;
+    height: auto;
     background-color: rgba(119, 118, 118, 0.21);
-    /* min-height: 100%; */
 }
 
 .header {
@@ -47,11 +43,9 @@ body {
     width: 100%;
     height: 16%;
     margin: 0;
-    /*padding-top: 1%;*/
+    padding-top: 1%;
+    color: #eeeeee;
     background-color: rgba(70, 67, 67, 0.66);
-    /*background-color: rgba(166, 75, 75, 0.69);*/
-    /*background: radial-gradient(rgba(150, 28, 28, 0.59), rgba(255, 192, 203, 0.65));*/
-    /* background: radial-gradient(rgb(166, 75, 75)37%,rgba(255, 255, 255, 0.41)); */
     -moz-animation-name: dropHeader;
     -o-animation-name: dropHeader;
     -webkit-animation-name: dropHeader;
@@ -69,6 +63,47 @@ body {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
 }
+
+
+
+.header-text {
+    width: 25%;
+    margin: auto;
+    float: left;
+    height: 100%;
+}
+
+    .header-text span {
+        /*color: #eeeeee;*/
+        font-size: 5.5vmin;
+        font-weight: bold;
+        top: 20%;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        float: inherit;
+    }
+
+
+
+
+.content-header {
+    position: relative;
+    width: 50%;
+    float: left;
+    height: 100%;
+    left: 3%;
+}
+
+
+.content-header-contact {
+    width: 25%;
+    float: right;
+    font-size: 2.5vmin;
+    word-wrap: break-word;
+}
+
+
 
 @-moz-keyframes dropHeader {
     0% {
@@ -144,48 +179,7 @@ body {
     }
 }
 
-.content {
-    position: relative;
-    width: 85%;
-    height: 75%;
-    top: 20%;
-    /* border: 0.75em solid gray; */
-    left: 9%;
-    padding-left: 1%;
-    animation-name: dropHeader;
-    animation-duration: 1s;
-}
 
-
-.content-header {
-    position: relative;
-    width: 50%;
-    /* min-height: 25%; */
-         padding: 0 27%;
-    height: 100%;
-    left: 5%;
-}
-
-
-
-
-.header-text {
-    width: 25%;
-    margin: auto;
-    float: left;
-    height: 100%;
-}
-
-    .header-text span {
-        color: #eeeeee;
-        font-size: 5.5vmin;
-        font-weight: bold;
-        top: 25%;
-        position: relative;
-        text-align: center;
-        width: 100%;
-        float: inherit;
-    }
 
 .circular-div {
     width: 12.5%;
@@ -201,11 +195,11 @@ body {
     border: 5.5px solid #eeeeee;
     text-align: center;
     display: inline-block;
-    top: 5%;
+    /*top: 5%;*/
 }
 
-.circular-div-hover {
-    transform: scale(1.2);
+.circular-div-select {
+    transform: scale(1.15);
 }
 
 .summary {
@@ -230,10 +224,19 @@ body {
     background-image: url(../../Images/Resume4/contacts-512.png);
 }
 
-.content-header-contact {
-    width: 25%;
-    float: right;
+.content {
+    position: absolute;
+    width: 85%;
+    height: 75%;
+    top: 20%;
+    /* border: 0.75em solid gray; */
+    left: 9%;
+    padding-left: 1%;
+    animation-name: dropHeader;
+    animation-duration: 1s;
 }
+
+
 .section {
     /*color: white;*/
     /* margin-top: 2%; */
@@ -243,6 +246,7 @@ body {
     top: 0;
     left: 0;
     height: 95%;
+    /*min-height: 95%;*/
     padding: 2% 5%;
     background-color: rgba(245, 181, 10, 0.74);
     background: linear-gradient(rgba(249, 181, 0, 0.42),#F9B703);
@@ -264,7 +268,7 @@ body {
     /* margin: 1%; */
     /* overflow-y: auto; */
     width: 100%;
-    height: 95%;
+    height: 85%;
 }
 
 @keyframes dropContent {
@@ -321,7 +325,7 @@ body {
 }
 
 .font-icon-size {
-    font-size: 24px !important;
+    font-size: 2.5vmin !important;
     margin: 0 1%;
 }
 
@@ -356,12 +360,12 @@ body {
     overflow: auto;
     overflow-y: hidden;
     height: 100%;
-    float: left;
-    width:100%;
+    /*float: left;*/
+    width: 100%;
 }
 
 .skill-circle {
-    width: 40%;
+    width: 30%;
 }
 
 /*.sub-skill {
@@ -379,4 +383,66 @@ body {
     white-space: nowrap; 
 }*/
 
+.resume-content-header {
+    float: left;
+    width: 15%;
+}
 
+@media screen and (max-width: 875px), screen and (max-height: 650px) {
+
+    html, body {
+        height: auto;
+        /*overflow-y: auto;*/
+    }
+
+    .header {
+        height: auto;
+    }
+
+    .content {
+        top: 25%;
+    }
+
+    .content-header-contact {
+        font-size: 3vmin;
+    }
+    .font-icon-size {
+    font-size: 3.5vmin !important;
+   
+}
+    .section-content {
+        overflow-y: auto;
+    }
+
+        .section-content::-webkit-scrollbar {
+            width: 10px;
+            background-color: #7B7979;
+            border-radius: 4px;
+        }
+
+        .section-content::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+            background-color: #E3E3E5;
+        }
+
+    .resume-content-header {
+        width: 100%;
+    }
+
+    .sub-skill {
+        height: auto;
+    }
+
+    .sub-skill-content {
+        height: 100%;
+    }
+
+    .skill {
+        width: 100%;
+    }
+
+        .skill span {
+            font-size: 4.6vmin;
+        }
+}
