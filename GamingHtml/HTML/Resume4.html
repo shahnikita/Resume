@@ -42,9 +42,6 @@
 
         <div class="content">
 
-
-
-
             <div class="section" id="section-summary">
                 <span class="section-header">About Me</span>
                 <div class="section-content">
@@ -62,46 +59,9 @@
             <div class="section" id="section-skills">
                 <span class="section-header">My Skills</span>
                 <div class="section-content">
-
-                    <!-- <div class="skill-content">
+                   
                     <div class="sub-skill">
-                        <div style="margin: auto; float: left; width: 100%;">
-                            <span>Programming Languages :     
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="sub-skill">
-                        <div style="margin: auto; float: left; width: 100%;">
-                            <span>Scripting Languages :     
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="sub-skill">
-                        <div style="margin: auto; float: left; width: 100%;">
-                            <span>Technologies:     
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="sub-skill">
-                        <div style="margin: auto; float: left; width: 100%;">
-                            <span>Database :     
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="sub-skill">
-                        <div style="margin: auto; float: left; width: 100%;">
-                            <span>Source Control :     
-                            </span>
-                        </div>
-                    </div>
-
-                        </div>-->
-                    <div class="sub-skill">
-                        <div style="margin: auto; float: left; width: 100%;">
+                        <div class="sub-skill-header">
                             <span>Programming:     
                             </span>
                         </div>
@@ -127,7 +87,7 @@
                     </div>
 
                     <div class="sub-skill">
-                        <div style="margin: auto; float: left; width: 100%;">
+                        <div class="sub-skill-header">
                             <span>Scripting Languages :     
                             </span>
                         </div>
@@ -153,7 +113,7 @@
                     </div>
 
                     <div class="sub-skill">
-                        <div style="margin: auto; float: left; width: 100%;">
+                        <div class="sub-skill-header">
                             <span>Technologies:     
                             </span>
                         </div>
@@ -187,6 +147,7 @@
 
                 </div>
             </div>
+
             <div class="section" id="section-experience">
                 <span class="section-header">Resume</span>
                 <div class="section-content">
@@ -235,7 +196,10 @@
                     </div>
                 </div>
             </div>
-            <div class="section" id="section-project">My Latest Work</div>
+            <div class="section" id="section-project">
+                <span class="section-header">My Latest Work</span>
+
+            </div>
             <!--<div class="section" id="section-contact">
                 <span class="section-header">Get In Touch</span>
                 <div class="section-content">
@@ -352,7 +316,7 @@
 
             function navigateUp() {
                 if ($(window).width() <= 875 || $(window).height() <= 650) {
-                   
+
                 }
                 else {
                     if (curPage === 0) return;
@@ -364,7 +328,7 @@
 
             function navigateDown() {
                 if ($(window).width() <= 875 || $(window).height() <= 650) {
-                   
+
                 }
                 else {
                     if (curPage === numOfPages) return;
