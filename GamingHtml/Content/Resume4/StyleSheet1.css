@@ -181,7 +181,7 @@ body {
     background-size: cover;
     background-position: center center;
     transition: all 0.7s ease-in;
-    border: 5.5px solid #eeeeee;
+    border: 3.6px solid #eeeeee;
     text-align: center;
     display: inline-block;
 }
@@ -267,8 +267,10 @@ body {
     height: 30%;
 }
 
-.sub-skill-header{
-    margin: auto; float: left; width: 100%;
+.sub-skill-header {
+    margin: auto;
+    float: left;
+    width: 100%;
 }
 
 .sub-skill-content {
@@ -278,6 +280,7 @@ body {
     /*float: left;*/
     width: 100%;
 }
+
 .skill {
     width: 25%;
     margin: auto;
@@ -341,6 +344,12 @@ body {
 .resume-content-header {
     float: left;
     width: 15%;
+}
+
+.resume-content {
+    margin: auto;
+    width: 70%;
+    margin-bottom: 2%;
 }
 
 @media screen and (max-width: 875px), screen and (max-height: 650px) {
