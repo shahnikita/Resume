@@ -31,7 +31,9 @@
                     <i class="fa fa-linkedin-square  font-icon-size"></i>
                     <i class="fa fa-github-square  font-icon-size"></i>
                     <i class="fa fa-skype  font-icon-size"></i>
-
+                    <i class="fa fa-envelope font-icon-size tooltip">
+                        <span class="tooltiptext">Contact Me!</span>
+                    </i>
                 </p>
 
 
@@ -199,16 +201,70 @@
             <div class="section" id="section-project">
                 <span class="section-header">My Latest Work</span>
                 <div class="section-content">
-                    <div class="sub-skill">
-                        <div class="sub-skill-header">
-                           <span> Online Recruiting/Staffing Application (SourcePros) </span>
+                    <div>
+                        <div class="resume-content-header">
+                            <span>SourcePros</span>
                         </div>
-                        <div class="sub-skill-content">
+                        <div class="resume-content">
                             <p>
+                                <strong>Online Recruiting/Staffing Application </strong>
+                                <br />
                                 SourcePros comprises various stages recruitment online, starting from fetching requirements from various sites and getting matching profiles till hiring process.
                             </p>
                         </div>
                     </div>
+
+                    <div>
+                        <div class="resume-content-header">
+                            <span>Whiteboard</span>
+                        </div>
+                        <div class="resume-content">
+                            <p>
+                                <strong>Online Presentation (SVG website)</strong>
+                                <br />
+                                Whiteboard is a web based online SVG share site similar to twiddla.
+                                Here active user can share document and also can draw objects real-time.
+                                Functionality of drawing includes various shapes, rich text share, with svg etc. 
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="resume-content-header">
+                            <span>Cotopaxi</span>
+                        </div>
+                        <div class="resume-content">
+                            <p>
+                                <strong>Admin ERP System</strong>
+                                <br />
+                                Cotopaxi is a SPA (single page application) erp project on admin side.
+                                 We maintained employee’s details, Client Company, allocated resources to the project and project member.
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                    <div>
+                        <div class="resume-content-header">
+                            <span>LC5Plus</span>
+                        </div>
+                        <div class="resume-content">
+                            <p>
+                                <strong>Online Idea Sharing System</strong>
+                                <br />
+                                Leaders Club (LC5) plus is just like a social networking site which included admin panel.
+                                Users have to select one club at the time of registration and 
+                                 can post Idea, Resources (Images/Video/pdf) in timeline for his/her club.
+                                 In timeline for user it shows all member’s Idea, Resources that they post.
+                                 User can schedule of the idea by specifying place and date that member has post. 
+                                User can also LIKE an Idea/Resource or comment on Idea/Resource of other member.
+                            </p>
+                        </div>
+                    </div>
+
+
+
                 </div>
 
             </div>
@@ -275,6 +331,28 @@
         </div>
 
     </div>
+
+    <div class="md-modal md-effect-17" id="contact">
+        <div class="md-content">
+            <!--header-->
+            <div class="section-header">
+                <!-- <i class="fa fa-paper-plane fa-2" aria-hidden="true"></i>-->
+                Drop Me a Line <span class="close"></span>
+            </div>
+            <!--Content-->
+            <div class="md-content-section">
+                <form>
+                    <input name="name" type="text" placeholder="Your Name..." />
+                    <input name="mail" type="text" placeholder="Your Email Address..." />
+                    <textarea tabindex="4" rows="10" cols="58" name="comment" placeholder="Your Message..." style="height: 70px;"></textarea>
+
+                    <input tabindex="5" type="submit" value="Submit" style="width: 90px;" />
+                </form>
+            </div>
+
+        </div>
+    </div>
+
     <script src="../Scripts/jquery-1.7.1.js"></script>
     <script src="../Scripts/jquery.circliful.min.js"></script>
     <script type="text/javascript">
@@ -294,10 +372,7 @@
                 $("#section-summary").addClass("section-display");
             }, animTime);
 
-            $(".circular-div").on("click", function () {
-                curPage = pagename.indexOf($(this).data("section"));
-                pagination();
-            });
+
 
             function pagination() {
 
@@ -327,7 +402,7 @@
             };
 
             function navigateUp() {
-                if ($(window).width() <= 875 || $(window).height() <= 650) {
+                if ($(window).width() <= 875 || $(window).height() <= 695) {
 
                 }
                 else {
@@ -339,7 +414,7 @@
             };
 
             function navigateDown() {
-                if ($(window).width() <= 875 || $(window).height() <= 650) {
+                if ($(window).width() <= 875 || $(window).height() <= 695) {
 
                 }
                 else {
@@ -350,24 +425,32 @@
                 return;
             };
 
-            $(document).on("mousewheel DOMMouseScroll", function (e) {
+            function mouseWheel(e) {
                 if (scrolling) return;
                 if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
                     navigateUp();
                 } else {
                     navigateDown();
                 }
-            });
+            }
 
-            $(document).on("keydown", function (e) {
+            function keyNavigate(e) {
                 if (scrolling) return;
                 if (e.which === 38) {
                     navigateUp();
                 } else if (e.which === 40) {
                     navigateDown();
                 }
-            });
+            }
 
+            $(document).on("mousewheel DOMMouseScroll", mouseWheel);
+
+            $(document).on("keydown", keyNavigate);
+
+            $(".circular-div").on("click", function () {
+                curPage = pagename.indexOf($(this).data("section"));
+                pagination();
+            });
             function animateSkills() {
                 if (!hasCreatedObjects) {
 
@@ -390,6 +473,28 @@
                     hasCreatedObjects = true;
                 }
             }
+
+            $(".fa-envelope").click(function () {
+                $(".container").addClass("md-perspective");
+                $("#contact").addClass("md-show");
+                $(document).off("keydown mousewheel DOMMouseScroll");
+                $(".circular-div").off("click");
+            })
+
+
+            //model close
+            $(".close").on("click", function () {
+
+                $(".container").removeClass("md-perspective");
+                $("#contact").removeClass("md-show");
+                $(document).on("mousewheel DOMMouseScroll", mouseWheel);
+                $(document).on("keydown", keyNavigate);
+                $(".circular-div").on("click", function () {
+                    curPage = pagename.indexOf($(this).data("section"));
+                    pagination();
+                });
+            });
+
         });
     </script>
 </body>
