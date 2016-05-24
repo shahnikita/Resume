@@ -289,7 +289,7 @@ body {
 }
 
 .section-header {
-   font-size: xx-large;
+    font-size: xx-large;
 }
 
 .section-content {
@@ -458,16 +458,17 @@ body {
 
 
 .md-content > div:first-child {
-  padding: 2.5%;
+    padding: 2.5%;
     margin: 0;
     width: 95%;
     height: 10%;
 }
+
 .md-content .md-content-section {
     padding: 2.5%;
     margin: 0;
     width: 85%;
-    height: 45%;
+    height: 65%;
 }
 
     .md-content .md-content-section form input, textarea {
@@ -502,7 +503,7 @@ body {
     }
 
     .content-header-contact {
-        font-size: 3vmin;
+        font-size: 2vmin;
     }
 
     .font-icon-size {
