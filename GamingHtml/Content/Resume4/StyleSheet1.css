@@ -138,9 +138,9 @@ body {
 
     .header-text span {
         /*color: #eeeeee;*/
-        font-size: 5.5vmin;
+        font-size: 5vmin;
         font-weight: bold;
-        top: 20%;
+        /*top: 20%;*/
         position: relative;
         text-align: center;
         width: 100%;
@@ -149,15 +149,16 @@ body {
 
 .content-header {
     position: relative;
-    width: 50%;
+    width: 25%;
     float: left;
     height: 100%;
-    left: 3%;
+    /*left: 3%;*/
+    padding: 0 7%;
 }
 
 
 .content-header-contact {
-    width: 25%;
+    width: 31%;
     float: right;
     font-size: 2.5vmin;
     -ms-word-wrap: break-word;
@@ -206,8 +207,8 @@ body {
     }
 
 .circular-div {
-    width: 12.5%;
-    padding-bottom: 12.5%;
+    width: 20%;
+    padding-bottom: 20%;
     margin: auto 1%;
     position: relative;
     background-color: #eeeeee;
@@ -296,16 +297,18 @@ body {
     font-size: 16px;
     width: 100%;
     height: 85%;
+    margin-top: 2%;
 }
 
 .sub-skill {
-    height: 30%;
+    height: 38%;
 }
 
 .sub-skill-header {
     margin: auto;
     float: left;
-    width: 100%;
+    width: 15%;
+    font-size: 20px;
 }
 
 .sub-skill-content {
@@ -313,7 +316,8 @@ body {
     overflow-y: hidden;
     height: 100%;
     /*float: left;*/
-    width: 100%;
+    width: 75%;
+    text-align: center;
 }
 
 .skill {
@@ -324,12 +328,15 @@ body {
 
     .skill span {
         display: inline-block;
-        font-size: 2.6vmin;
+        /*font-size: 2.6vmin;*/
         /*font-weight: bold;*/
     }
 
 .skill-circle {
-    width: 30%;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-top: -5%;
 }
 
 
@@ -482,51 +489,68 @@ body {
     }
 
 
-
-
-
-
-
-@media screen and (max-width: 875px), screen and (max-height: 695px) {
-
-    html, body {
+@media (max-width: 1240px) {
+    body {
         height: auto;
-        /*overflow-y: auto;*/
     }
 
     .header {
-        height: auto;
+        height: 100%;
+        width: 20%;
     }
 
-    .content {
-        top: 25%;
+    .header-text {
+        height: 15%;
+        width: 100%;
+        display: table;
+    }
+
+        .header-text span {
+            width: 98%;
+        }
+
+    .content-header {
+        height: 46%;
+        width: 100%;
+        display: inline-table;
+    }
+
+    .circular-div {
+        padding-bottom: 25%;
+        width: 25%;
+        margin: auto 30%;
+        margin-bottom: 5%;
     }
 
     .content-header-contact {
-        font-size: 2vmin;
+        width: 80%;
+        height: 29%;
     }
 
     .font-icon-size {
         font-size: 3.5vmin !important;
     }
 
+    .content {
+        height: 95%;
+        width: 75%;
+        top: 1%;
+        left: 21%;
+    }
+
+    .section {
+        min-height: 100%;
+    }
+
+    .section-header {
+        font-size: x-large;
+    }
+
     .section-content {
         overflow-y: auto;
     }
 
-        .section-content::-webkit-scrollbar {
-            width: 10px;
-            background-color: #7B7979;
-            border-radius: 4px;
-        }
-
-        .section-content::-webkit-scrollbar-thumb {
-            border-radius: 4px;
-            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-            background-color: #E3E3E5;
-        }
-
-    .resume-content-header {
+    .resume-content {
         width: 100%;
     }
 
@@ -534,32 +558,34 @@ body {
         height: auto;
     }
 
-    .sub-skill-content {
-        height: 100%;
-    }
-
-    .skill {
+    .resume-content-header {
         width: 100%;
     }
 
-        .skill span {
-            font-size: 4.6vmin;
-        }
-
-
-    .md-content .md-content-section {
-        overflow-y: auto;
+    .sub-skill-content {
+        width: 100%;
+        margin-bottom: 10%;
     }
 
-        .md-content .md-content-section::-webkit-scrollbar {
-            width: 10px;
-            background-color: #7B7979;
-            border-radius: 4px;
-        }
+    .section-content::-webkit-scrollbar {
+        width: 10px;
+        background-color: #7B7979;
+        border-radius: 4px;
+    }
 
-        .md-content .md-content-section::-webkit-scrollbar-thumb {
-            border-radius: 4px;
-            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-            background-color: #E3E3E5;
-        }
+    .section-content::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #E3E3E5;
+    }
+
+    .skill {
+        min-width: 50%;
+    }
+
+    .md-modal {
+        top: 5%;
+        left: 10%;
+        width: 80%;
+    }
 }

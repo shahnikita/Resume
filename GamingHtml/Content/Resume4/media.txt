@@ -1,0 +1,79 @@
+@media screen and (max-width: 875px), screen and (max-height: 695px) {
+
+    html, body {
+        height: auto;
+        /*overflow-y: auto;*/
+    }
+
+    /*.header {
+        height: auto;
+    }*/
+
+    .content {
+        top: 25%;
+    }
+
+    .content-header-contact {
+        font-size: 2vmin;
+    }
+
+    .font-icon-size {
+        font-size: 3.5vmin !important;
+    }
+
+    .section-content {
+        overflow-y: auto;
+    }
+
+        .section-content::-webkit-scrollbar {
+            width: 10px;
+            background-color: #7B7979;
+            border-radius: 4px;
+        }
+
+        .section-content::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+            background-color: #E3E3E5;
+        }
+
+    .resume-content-header {
+        width: 100%;
+    }
+
+    .sub-skill {
+        height: auto;
+    }
+
+    .sub-skill-content {
+        height: 100%;
+    }
+
+    .skill {
+        width: 100%;
+    }
+
+    /*.skill span {
+            font-size: 3.6vmin;
+        }*/
+
+
+    .md-content .md-content-section {
+        overflow-y: auto;
+    }
+
+        .md-content .md-content-section::-webkit-scrollbar {
+            width: 10px;
+            background-color: #7B7979;
+            border-radius: 4px;
+        }
+
+        .md-content .md-content-section::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+            background-color: #E3E3E5;
+        }
+}
+
+
+
