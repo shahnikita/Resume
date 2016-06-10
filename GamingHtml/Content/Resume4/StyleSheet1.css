@@ -80,6 +80,49 @@
     }
 }
 
+
+@keyframes rotate-in-sm {
+  0% {
+    transform: rotate(-45deg) translate(-20%,-80%);
+   
+  
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0);
+     transform: translate(0px,0px) translate(0%,0%);
+   
+    opacity: 1;
+  }
+}
+
+
+.rotate-in-sm {
+  animation-name: rotate-in-sm;
+}
+
+
+@keyframes rotate-out-sm {
+  0% {
+    transform: rotate(0);
+    transform-origin: center center;
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(45deg);
+    transform-origin: center center;
+    opacity: 0;
+  }
+}
+
+
+.rotate-out-sm {
+  animation-name: rotate-out-sm;
+}
+
+
+
+
 html, body {
     width: 100%;
     margin: 0;
@@ -111,10 +154,10 @@ body {
     padding-top: 1%;
     color: #eeeeee;
     background-color: rgba(70, 67, 67, 0.66);
-    -moz-animation-name: dropHeader;
+    /*-moz-animation-name: dropHeader;
     -o-animation-name: dropHeader;
     -webkit-animation-name: dropHeader;
-    animation-name: dropHeader;
+    animation-name: dropHeader;*/
     -moz-animation-iteration-count: 1;
     -o-animation-iteration-count: 1;
     -webkit-animation-iteration-count: 1;
@@ -260,33 +303,31 @@ body {
     top: 20%;
     left: 9%;
     padding-left: 1%;
-    animation-name: dropHeader;
-    animation-duration: 1s;
+    /*animation-name: dropHeader;*/
+    /*animation-duration: 1s;*/
 }
 
 .section {
     display: none;
-    -moz-transition: all 0.7s ease-in;
-    -o-transition: all 0.7s ease-in;
-    -webkit-transition: all 0.7s ease-in;
-    transition: all 0.7s ease-in;
+   color:white;
     position: relative;
     top: 0;
     left: 0;
     height: 95%;
-    /*min-height: 95%;*/
     padding: 2% 5%;
     background-color: rgba(245, 181, 10, 0.74);
-    background: linear-gradient(rgba(249, 181, 0, 0.42),#F9B703);
+    /*background: linear-gradient(rgba(249, 181, 0, 0.42),#F9B703);*/
+    background: linear-gradient(rgba(107, 50, 60, 0.28),rgba(181, 128, 137, 0.82));
     -moz-border-radius: 17px;
     -webkit-border-radius: 17px;
     border-radius: 17px;
+    
 }
 
 .section-display {
     display: block;
-    animation-name: dropContent;
-    animation-duration: 0.5s;
+   animation-name: rotate-in-sm;
+    animation-duration: 1s;
 }
 
 .section-header {
@@ -312,8 +353,8 @@ body {
 }
 
 .sub-skill-content {
-    overflow: auto;
-    overflow-y: hidden;
+    /*overflow: auto;
+    overflow-y: hidden;*/
     height: 100%;
     /*float: left;*/
     width: 75%;
@@ -321,7 +362,7 @@ body {
 }
 
 .skill {
-    width: 25%;
+    width: 18.75%;
     margin: auto;
     float: left;
 }
@@ -489,7 +530,7 @@ body {
     }
 
 
-@media (max-width: 1240px) {
+@media (max-height: 500px),(max-width : 1214px),(orientation:portrait) {
     body {
         height: auto;
     }

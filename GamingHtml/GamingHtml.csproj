@@ -189,6 +189,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\animsition.min.css" />
     <Content Include="Content\cross.png" />
     <Content Include="Content\jquery.circliful.css" />
     <Content Include="Content\Resume1\StyleSheet1.css" />
@@ -317,6 +318,7 @@
     <Content Include="Images\Test\profle-128.png" />
     <Content Include="Images\Test\stachoverflow.png" />
     <Content Include="Images\Test\texture.jpg" />
+    <Content Include="Scripts\animsition.min.js" />
     <Content Include="Scripts\Custom\JavaScript1.js" />
     <Content Include="Scripts\Custom\JSON\enemies.json.js" />
     <Content Include="Scripts\Custom\JSON\objects.json.js" />
