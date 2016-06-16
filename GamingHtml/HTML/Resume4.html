@@ -4,14 +4,13 @@
     <title>Nikita Shah</title>
     <link href="../Content/Resume4/StyleSheet1.css" rel="stylesheet" />
     <link href="../css/font-awesome.min.css" rel="stylesheet" />
-    
+
 </head>
 <body>
     <div class="container">
         <div class="header fade-in-down">
             <div class="header-text">
-                <span>              
-                    NIKITA SHAH</span>
+                <span>NIKITA SHAH</span>
             </div>
             <div class="content-header">
 
@@ -47,10 +46,7 @@
 
         <div class="content rotate-in-sm">
 
-            <div class="section animsition" id="section-summary" data-animsition-in-class="rotate-in-sm"
-  data-animsition-in-duration="1000"
-  data-animsition-out-class="rotate-out-sm"
-  data-animsition-out-duration="800" >
+            <div class="section animsition" id="section-summary">
                 <div>
                     <span class="section-header">About</span>
                     <span class="section-header">Me</span>
@@ -63,8 +59,12 @@
                         As I have started role as a  Software Engineer (.net developer) had many achievements, including development of a several projects for several clients of the company.
                     </p>
                     <img src="../Images/Test/signiture.png" alt="" />
+                     <a class="next-page">
+                   <img src="../Images/Resume/download.jpg" alt="" style="vertical-align: middle; width: 4%" />
+                    <span>Skills---></span>
+                </a>
                 </div>
-
+               
             </div>
 
             <div class="section " id="section-skills">
@@ -324,13 +324,13 @@
                 //remove 
                 $(".section-display").each(function (index, ele) {
                     $(ele).removeClass("section-display");
-                   
+
                 });
 
                 var a = "#" + pgPrefix + pagename[curPage];
 
                 $(a).addClass("section-display");
-              
+
                 $(".circular-div-select").each(function (index, ele) {
                     $(ele).removeClass("circular-div-select");
                 });

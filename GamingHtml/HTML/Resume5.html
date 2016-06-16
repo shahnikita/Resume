@@ -1,23 +1,173 @@
-﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<html>
 <head>
-    <title></title>
+    <title>TEST</title>
+
     <link href="../Content/Resume5/Resume5.css" rel="stylesheet" />
 
-    <link href="../css/font-awesome.min.css" rel="stylesheet" />
 
 </head>
 <body>
-   <div class="header">
-       <div class="triangle"></div>
-   </div>
-    
+    <div class="container">
+
+        <div class="main-menu">
+            <div class="middle" id="main">
+                <h1>Hello!</h1>
+            </div>
+            <div class="side top">
+                <h3>Skills</h3>
+            </div>
+            <div class="side left">
+                <h3>AboutMe</h3>
+            </div>
+            <div class="side right">
+                <h3>Experience</h3>
+            </div>
+            <div class="side bottom">
+                <h3>Projects</h3>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <div class="middle" id="content-tile">
+
+                <p class="Summary">
+                    As a highly motivated computer professional with the enthusiasm to accept new challenges, the opportunity to work as a software engineer.
+                        Having worked within the industry for over 2.5+year, started my career with .net MVC architecture have developed a wide range of skills that would meet, and exceed the expectations.
+                            Strong team-player, good problem-solver, quick learner, responsible, purposeful, punctual, cheerful, sociable and hard-working person.
+                        As I have started role as a  Software Engineer (.net developer) had many achievements, including development of a several projects for several clients of the company.
+                </p>
+
+                <p class="Skills">
+                    <!--<ul>
+                        <li>Programming:
+                            <br />
+                            C#,.NET 2.0,3.5/4.0, Ajax, Unit testing                   
+                        </li>
+                     </ul>-->
+                    •	Programming Languages : C#,.NET 2.0,3.5/4.0, Ajax, Unit testing<br />
+                    •	Scripting Languages : JavaScript, JQuery, Knockout.js, Angular.js, require.js, Jasmine<br />
+                    •	Technologies: ASP.Net MVC (3, 4, 4.5), ADO.Net, Web-Services, Razor, LINQ<br />
+                    , Entity-Framework, Signal R, SVG and Stored Procedure.<br />
+                    •	Database: Microsoft SQL Server- 2000/2005/2008<br />
+                    •	Source Control: TFS, GITHub<br />
 
 
+
+                </p>
+
+                <p class="Experience">
+                    •	Rangam InfoTech Pvt. Ltd, Vadodara, GJ 				(Mar, 2015-Presently)
+Job Position: Software Engineer 	
+•	Promact InfoTech Pvt. Ltd, Vadodara, GJ 				(Aug, 2013-Dec, 2015)
+Job Position: Jnr Software Engineer 
+                </p>
+
+                   <p class="Projects"></p>
+
+            </div>
+            <div class="bottom back">
+                <p>
+                    Skills<br />
+                    --->
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="../Scripts/jquery-1.7.1.js"></script>
+
+
+    <script src="../Scripts/jquery-ui-1.9.2.js"></script>
 </body>
-<script src="../Scripts/jquery-1.7.1.js"></script>
+
+<script>
+    var BGColors = ['rgba(0,255,0,0.4)', 'rgba(97, 214, 214, 0.4)', 'rgba(216, 76, 146, 0.4)', 'rgba(226,171,16,0.4)']
+
+    var NextColors = ['#00ffff', '#ff69b4', '#9acd32', '#e2ab10', '#9acd32'];
+
+    var NextTabs = ['Summary', 'Skills', 'Experience', 'Projects'];
+
+    var delay = 1500;
+
+    var displayDetail = true;
+
+    $(document).ready(function () {
+
+
+
+        function Animate_Text(flag) {
+            $("#main > h1").animate({ 'opacity': 0 }, 500, function () {
+
+                $("#main > h1").text(flag ? "MENU" : "Hello!");
+                $(this).animate({ 'opacity': 1 }, 500);
+            });
+        }
+
+        $("#main").on("click", function () {
+            if (displayDetail) {
+                //Hide All 
+                $(".side").addClass("center-tile");
+                $("#main").addClass("header-tile");
+                $("#main > h1").addClass("header-text");
+                Animate_Text(displayDetail);
+                $("#content-tile").addClass("content-tile");
+                $("#content-tile").css("background-color", BGColors[0]);
+                $(".summary").addClass("display-tile");
+                $(".back").addClass("back-tile");
+                $(".back").css("background-color", NextColors[0]);
+                $(".back > p").addClass("display-tile")
+                displayDetail = false;
+            }
+            else {
+                $(".side").removeClass("center-tile");
+                $("#main").removeClass("header-tile");
+                $("#main > h1").removeClass("header-text");
+                $("#content-tile").removeClass("content-tile");
+                Animate_Text(displayDetail);
+                $("#content-tile").removeAttr("style");
+
+                $(".summary").removeClass("display-tile");
+                $(".back").removeClass("back-tile");
+                $(".back").removeAttr("style");
+                $(".back > p").removeClass("display-tile");
+                displayDetail = true;
+            }
+        });
+
+        $(".back").on("click", function () {
+            jQuery.each($("#content-tile .display-tile")[0].classList, function (index, cl) {
+                var x = jQuery.inArray(cl, NextTabs)
+                if (x > -1) {
+                    x = x == NextTabs.length - 1 ? 0 : ++x;
+                    $("#content-tile").css("width", 0);
+                    $("#content-tile .display-tile").removeClass("display-tile");
+                   
+                 
+                    setTimeout(function () {
+                        $("#content-tile").removeAttr("style");
+                        $("#content-tile").css("background-color", BGColors[x]);
+                        var t = "." + NextTabs[x];
+                        $(t).addClass("display-tile");
+                        $(".back p").text(NextTabs[++x == NextTabs.length ? 0 : x]);
+                        return;
+                    }, delay);
+
+                   
+                }
+
+            });
 
 
 
 
+
+
+        });
+
+
+    });
+</script>
 </html>

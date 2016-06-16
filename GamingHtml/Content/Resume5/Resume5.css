@@ -1,29 +1,236 @@
-﻿.triangle {
-    position: relative;
-    display: inline-block;
-    height: 50px; width:50%;
-    text-align: center;
-    color: white;
-    background: gray;
-    line-height: 50px;
-    text-decoration: none;
-    padding-bottom:15%;
-  background-clip:content-box;
-    overflow:hidden;
+﻿/*@import url(http://fonts.googleapis.com/css?family=Allura);*/
+
+:root {
+    --transform:rotate(45deg);
+    --transition:all 1.5s ease-in-out;
 }
-.triangle:after {
-    content: "";
+
+html, body {
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: cursive;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-size: cover;
+    background-image: url(../../Images/Background/001_paper_2872x2592_all-free-download.com.jpg);
+    overflow: auto;
+    min-height: 600px;
+    min-width: 600px;
+}
+
+    body * {
+        transition: var(--transition);
+    }
+
+.container  p {
+    transition-delay: 0.5s;
+}
+
+.container {
+    width: 100%;
+    margin: 0;
+    height: auto;
+    background-color: rgba(119, 118, 118, 0.21);
+}
+
+
+
+.main-menu {
     position: absolute;
-    top:50px; left: 0;
-    background-color:inherit;
-    padding-bottom:50%; width:57.7%;
-    z-index:-1;
-    
-    -webkit-transform-origin:0 0;
-    -ms-transform-origin:0 0;
-    transform-origin:0 0;
-    
-    -webkit-transform: rotate(-30deg) skewX(30deg);;
-    -ms-transform: rotate(-30deg) skewX(30deg);
-    transform: rotate(-30deg) skewX(30deg);
+    width: 100%;
+    min-height: 100%;
+}
+
+    .main-menu div {
+        display: table-cell;
+        position: absolute;
+        -moz-transform: var(--transform);
+        -ms-transform: var(--transform);
+        -o-transform: var(--transform);
+        -webkit-transform: var(--transform);
+        transform: var(--transform);
+        z-index: -1;
+    }
+
+        .main-menu div:before {
+            content: "";
+            display: block;
+            padding-top: 100%;
+        }
+
+    .main-menu .middle {
+        width: 50vmin;
+        background-color: orangered;
+        top: 25vmin;
+        left: 38vw;
+        z-index: 1;
+    }
+
+        .main-menu .middle h1 {
+            font-size: 7vmin;
+            position: absolute;
+            transform: rotate(-45deg);
+            margin: 0;
+            left: 8vw;
+            top: 16vh;
+        }
+
+    .main-menu h3 {
+        position: absolute;
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        margin: 0;
+        font-size: 3vmin;
+        text-align: center;
+        left: 2vw;
+        top: 7vh;
+    }
+
+.side {
+    width: 20vmin;
+    height: 20vmin;
+}
+
+.main-menu .top {
+    background-color: aqua;
+    top: 18vh;
+    left: 58.4vw;
+}
+
+.main-menu .left {
+    background-color: yellowgreen;
+    top: 18vh;
+    left: 32vw;
+}
+
+
+
+.main-menu .right {
+    background-color: hotpink;
+    top: 62vh;
+    left: 32vw;
+}
+
+
+
+.main-menu .bottom {
+    background-color: #e2ab10;
+    top: 62vh;
+    left: 58.4vw;
+}
+
+
+.content {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+}
+
+    .content div {
+        opacity: 0;
+        display: table-cell;
+        position: absolute;
+        -moz-transform: var(--transform);
+        -ms-transform: var(--transform);
+        -o-transform: var(--transform);
+        -webkit-transform: var(--transform);
+        transform: var(--transform);
+      
+    }
+
+    .content .middle {
+        width: 70vmin;
+        height: 70vmin;
+        /*background-image: url(../../Images/Background/rulGwnG.jpg);*/
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+        .content .middle p, .content .bottom p {
+            position: relative;
+            opacity: 0;
+            transform: rotate(-45deg);
+        }
+
+    .content .bottom {
+        opacity: 0;
+        width: 20vmin;
+        height: 20vmin;
+        background-color: gray;
+        top: 50vh;
+        left: 81vw;
+    }
+
+
+
+.center {
+    opacity: 0;
+    left: 40% !important;
+    top: 40% !important;
+}
+
+.header-content {
+    width: 20vmin;
+    height: 20vmin;
+    background-color: blanchedalmond;
+    top: 15vmin;
+    left: 50vmin;
+}
+
+.Summary,.Skills {
+    opacity: 0;
+    width: 68vmin;
+    height: 32vmin;
+    position: absolute !important;
+    top: 15vmin;
+    left: 0;
+    z-index: 1;
+}
+
+
+
+/*transition*/
+.header-tile {
+    width: 20vmin!important;
+    height: 20vmin !important;
+    top: 13.6vh !important;
+    left: 26.5vw !important;
+}
+
+.center-tile {
+    opacity: 0;
+    left: 40vw !important;
+    top: 40vh !important;
+}
+
+.content-tile {
+    top: 15vmin !important;
+    left: 32.4vw !important;
+    opacity: 1 !important;
+}
+
+.display-tile {
+    opacity: 1 !important;
+}
+
+.back-tile {
+    opacity: 1!important;
+    top: 66.6vh !important;
+    left: 62.4vw !important;
+    z-index:1;
+}
+
+.header-text {
+    font-size: 20px !important;
+    transform: rotate(-90deg);
+    left: 3.5vw !important;
+    top: 7.4vh !important;
 }
