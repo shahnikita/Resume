@@ -2,8 +2,72 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
+    <style>
+        .main {
+            width: 400px;
+            height: 400px;
+            align-items: center;
+        }
+
+        .top-left {
+            -webkit-shape-outside: polygon(0 0, 0 100%,100% 0);
+            float: left;
+            width: 45%;
+            height: 50%;
+            background-color: lightgray;
+            -webkit-clip-path: polygon(0 0, 0 100%,100% 0);
+        }
+
+        .top-right {
+            -webkit-shape-outside: polygon(100% 0, 100% 100%, 0 0);
+            float: right;
+            width: 45%;
+            height: 50%;
+            background-color: lightgray;
+            -webkit-clip-path: polygon(100% 0, 100% 100%, 0 0);
+        }
+
+        .left {
+            -webkit-shape-outside: polygon(0 0, 100% 100%, 0 100%);
+            float: left;
+            width: 45%;
+            height: 50%;
+            background-color: lightgray;
+            -webkit-clip-path: polygon(0 0, 100% 100%, 0 100%);
+        }
+
+        .right {
+            -webkit-shape-outside: polygon(100% 0, 100% 100%, 0 100%);
+            float: right;
+            width: 45%;
+            height: 50%;
+            background-color: lightgray;
+            -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
+        }
+
+        p {
+            text-align: center;
+            vertical-align: middle;
+            line-height: normal;
+            margin: 0;
+        }
+    </style>
 </head>
+
 <body>
 
+
+    <div class="main">
+        <div class="top-left"></div>
+        <div class="top-right"></div>
+        <p>
+            As a highly motivated computer professional with the enthusiasm to accept new challenges, the opportunity to work as a software engineer.
+                        Having worked within the industry for over 2.5+year, started my career with .net MVC architecture have developed a wide range of skills that would meet, and exceed the expectations.
+                            Strong team-player, good problem-solver, quick learner, responsible, purposeful, punctual, cheerful, sociable and hard-working person.
+                        As I have started role as a  Software Engineer (.net developer) had many achievements, including development of a several projects for several clients of the company.
+        </p>
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
 </body>
 </html>

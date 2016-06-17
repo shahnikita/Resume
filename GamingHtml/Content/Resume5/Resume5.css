@@ -2,8 +2,36 @@
 
 :root {
     --transform:rotate(45deg);
-    --transition:all 1.5s ease-in-out;
+    --transition:all 1.5s linear;
 }
+
+
+@keyframes fade-in-down {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1 !important;
+        display: block;
+    }
+}
+
+@keyframes fade-out-down {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(500px);
+        opacity: 0;
+    }
+}
+
+
+
 
 html, body {
     width: 100%;
@@ -14,36 +42,27 @@ html, body {
     -webkit-font-smoothing: antialiased;
 }
 
-body {
+html{
     background-size: cover;
     background-image: url(../../Images/Background/001_paper_2872x2592_all-free-download.com.jpg);
     overflow: auto;
-    min-height: 600px;
-    min-width: 600px;
-}
-
-    body * {
-        transition: var(--transition);
-    }
-
-.container  p {
-    transition-delay: 0.5s;
+   
 }
 
 .container {
-    width: 100%;
+    width: 1000px;
     margin: 0;
-    height: auto;
-    background-color: rgba(119, 118, 118, 0.21);
+    height:  1000px;
+   
 }
 
 
 
-.main-menu {
+/*.main-menu {
     position: absolute;
     width: 100%;
     min-height: 100%;
-}
+}*/
 
     .main-menu div {
         display: table-cell;
@@ -68,6 +87,7 @@ body {
         top: 25vmin;
         left: 38vw;
         z-index: 1;
+        transition: var(--transition);
     }
 
         .main-menu .middle h1 {
@@ -75,27 +95,17 @@ body {
             position: absolute;
             transform: rotate(-45deg);
             margin: 0;
-            left: 8vw;
-            top: 16vh;
+            left: 2vw;
+            top: 8.5vh;
+            transition: var(--transition);
         }
 
-    .main-menu h3 {
-        position: absolute;
-        -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-        margin: 0;
-        font-size: 3vmin;
-        text-align: center;
-        left: 2vw;
-        top: 7vh;
-    }
+
 
 .side {
     width: 20vmin;
     height: 20vmin;
+    transition: var(--transition);
 }
 
 .main-menu .top {
@@ -110,15 +120,11 @@ body {
     left: 32vw;
 }
 
-
-
 .main-menu .right {
     background-color: hotpink;
     top: 62vh;
     left: 32vw;
 }
-
-
 
 .main-menu .bottom {
     background-color: #e2ab10;
@@ -142,34 +148,40 @@ body {
         -o-transform: var(--transform);
         -webkit-transform: var(--transform);
         transform: var(--transform);
-      
     }
 
     .content .middle {
         width: 70vmin;
         height: 70vmin;
-        /*background-image: url(../../Images/Background/rulGwnG.jpg);*/
         top: 0;
         left: 0;
         z-index: 1;
+        transition: var(--transition);
     }
-
-        .content .middle p, .content .bottom p {
-            position: relative;
-            opacity: 0;
-            transform: rotate(-45deg);
-        }
 
     .content .bottom {
         opacity: 0;
         width: 20vmin;
         height: 20vmin;
-        background-color: gray;
         top: 50vh;
         left: 81vw;
+        transition: var(--transition);
     }
 
+        .content .bottom h3 {
+            opacity: 0;
+        }
 
+
+        .main-menu h3, .content .bottom h3 {
+            position: absolute;
+            transform: rotate(-45deg);
+            margin: 0;
+            font-size: 3vmin;
+            text-align: center;
+            left: 1.4vw;
+            top: 7vh;
+        }
 
 .center {
     opacity: 0;
@@ -185,14 +197,16 @@ body {
     left: 50vmin;
 }
 
-.Summary,.Skills {
+.Summary, .Skills, .Experience, .Projects {
     opacity: 0;
-    width: 68vmin;
-    height: 32vmin;
-    position: absolute !important;
-    top: 15vmin;
-    left: 0;
     z-index: 1;
+    text-align: center;
+    vertical-align: middle;
+    line-height: normal;
+    margin: 0;
+    transform: rotate(0)!important;
+    display: none;
+    /*transition: all 1s linear;*/
 }
 
 
@@ -219,13 +233,15 @@ body {
 
 .display-tile {
     opacity: 1 !important;
+    display: block;
+    animation-name: fade-in-down;
+    animation-duration: 0.2s;
 }
 
 .back-tile {
     opacity: 1!important;
     top: 66.6vh !important;
     left: 62.4vw !important;
-    z-index:1;
 }
 
 .header-text {
@@ -233,4 +249,69 @@ body {
     transform: rotate(-90deg);
     left: 3.5vw !important;
     top: 7.4vh !important;
+}
+
+
+.main {
+    position: relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 65vmin;
+    height: 44vmin;
+    align-items: center;
+    transform: rotate(0)!important;
+    opacity: 0;
+}
+
+.top-left-data {
+    -webkit-shape-outside: polygon(0 0, 0 100%,100% 0);
+    float: left;
+    width: 20vmin;
+    height: 20vmin;
+    /*background-color: lightgray;*/
+    -webkit-clip-path: polygon(0 0, 0 100%,100% 0);
+    transform: rotate(0)!important;
+}
+
+.top-right-data {
+    -webkit-shape-outside: polygon(100% 0, 100% 100%, 0 0);
+    float: right;
+    width: 20vmin;
+    height: 20vmin;
+    /*background-color: lightgray;*/
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 0);
+    transform: rotate(0)!important;
+}
+
+.left-data {
+    -webkit-shape-outside: polygon(0 0, 100% 100%, 0 100%);
+    float: left;
+    width: 20vmin;
+    height: 20vmin;
+    /*background-color: lightgray;*/
+    -webkit-clip-path: polygon(0 0, 100% 100%, 0 100%);
+    transform: rotate(0)!important;
+}
+
+.right-data {
+    -webkit-shape-outside: polygon(100% 0, 100% 100%, 0 100%);
+    float: right;
+    width: 20vmin;
+    height: 20vmin;
+    /*background-color: lightgray;*/
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    transform: rotate(0)!important;
+}
+
+.main-tile {
+    opacity: 1!important;
+    top: 13vmin !important;
+    left: 35vw !important;
+    transition-delay: 1.5s;
+}
+
+.font-icon-size {
+    font-size: 2.5vmin !important;
+    margin: 0 1%;
 }
