@@ -2,7 +2,7 @@
 
 :root {
     --transform:rotate(45deg);
-    --transition:all 1.5s linear;
+    --transition:all 1s linear;
 }
 
 
@@ -37,151 +37,147 @@ html, body {
     width: 100%;
     margin: 0;
     height: 100%;
-    overflow: hidden;
     font-family: cursive;
     -webkit-font-smoothing: antialiased;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
 }
 
-html{
+body {
     background-size: cover;
     background-image: url(../../Images/Background/001_paper_2872x2592_all-free-download.com.jpg);
-    overflow: auto;
-   
 }
 
 .container {
-    width: 1000px;
-    margin: 0;
-    height:  1000px;
-   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -340px;
+    margin-left: -340px;
+    width: 720px;
+    height: 720px;
+}
+
+.main-menu div {
+    position: absolute;
+    transform: var(--transform);
+    z-index: 1;
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-menu .middle {
+    width: 400px;
+    height: 400px;
+    top: 150px;
+    left: 150px;
+    background-color: orangered;
+    z-index: 1;
+    transition: var(--transition);
+}
+
+.side {
+    width: 160px;
+    height: 160px;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.main-menu .top {
+    background-color: aqua;
+    top: 80px;
+    left: 475px;
+}
+
+.main-menu .left {
+    background-color: yellowgreen;
+       left: 65px;
+    top: 80px;
+}
+
+.main-menu .right {
+    background-color: hotpink;
+        left: 65px;
+ top: 460px;
+}
+
+.main-menu .bottom {
+    background-color: #e2ab10;
+   top: 460px;
+    left: 475px;
 }
 
 
-
-/*.main-menu {
+/*.content {
     position: absolute;
     width: 100%;
     min-height: 100%;
 }*/
 
-    .main-menu div {
-        display: table-cell;
-        position: absolute;
-        -moz-transform: var(--transform);
-        -ms-transform: var(--transform);
-        -o-transform: var(--transform);
-        -webkit-transform: var(--transform);
-        transform: var(--transform);
-        z-index: -1;
-    }
+.content div {
+    opacity: 0;
+    display: table-cell;
+    position: absolute;
+    -moz-transform: var(--transform);
+    -ms-transform: var(--transform);
+    -o-transform: var(--transform);
+    -webkit-transform: var(--transform);
+    transform: var(--transform);
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+}
 
-        .main-menu div:before {
-            content: "";
-            display: block;
-            padding-top: 100%;
-        }
-
-    .main-menu .middle {
-        width: 50vmin;
-        background-color: orangered;
-        top: 25vmin;
-        left: 38vw;
-        z-index: 1;
-        transition: var(--transition);
-    }
-
-        .main-menu .middle h1 {
-            font-size: 7vmin;
-            position: absolute;
-            transform: rotate(-45deg);
-            margin: 0;
-            left: 2vw;
-            top: 8.5vh;
-            transition: var(--transition);
-        }
-
-
-
-.side {
-    width: 20vmin;
-    height: 20vmin;
+.content .middle {
+    width: 0;
+    height: 0;
+    top: 100px;
+    left: 100px;
+    z-index: 0;
     transition: var(--transition);
 }
 
-.main-menu .top {
-    background-color: aqua;
-    top: 18vh;
-    left: 58.4vw;
+.content .bottom {
+    opacity: 0;
+    width: 160px;
+    height: 160px;
+    top: 50vh;
+    left: 81vw;
+    transition: var(--transition);
 }
 
-.main-menu .left {
-    background-color: yellowgreen;
-    top: 18vh;
-    left: 32vw;
-}
-
-.main-menu .right {
-    background-color: hotpink;
-    top: 62vh;
-    left: 32vw;
-}
-
-.main-menu .bottom {
-    background-color: #e2ab10;
-    top: 62vh;
-    left: 58.4vw;
-}
-
-
-.content {
-    position: absolute;
-    width: 100%;
-    min-height: 100%;
-}
-
-    .content div {
+    .content .bottom h3 {
         opacity: 0;
-        display: table-cell;
-        position: absolute;
-        -moz-transform: var(--transform);
-        -ms-transform: var(--transform);
-        -o-transform: var(--transform);
-        -webkit-transform: var(--transform);
-        transform: var(--transform);
     }
 
-    .content .middle {
-        width: 70vmin;
-        height: 70vmin;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        transition: var(--transition);
+
+    .main-menu h3, .content .bottom h3, .main-menu .middle h1 {
+        margin-left: auto;
+        margin-right: auto;
+        width: 6em;
+        transform: rotate(-45deg);
+        font-size: 3vmin;
+        margin: 0;
     }
 
-    .content .bottom {
-        opacity: 0;
-        width: 20vmin;
-        height: 20vmin;
-        top: 50vh;
-        left: 81vw;
-        transition: var(--transition);
-    }
+.main-menu .middle h1 {
+    font-size: 7vmin;
+}
 
-        .content .bottom h3 {
-            opacity: 0;
-        }
-
-
-        .main-menu h3, .content .bottom h3 {
-            position: absolute;
-            transform: rotate(-45deg);
-            margin: 0;
-            font-size: 3vmin;
-            text-align: center;
-            left: 1.4vw;
-            top: 7vh;
-        }
 
 .center {
     opacity: 0;
@@ -190,8 +186,8 @@ html{
 }
 
 .header-content {
-    width: 20vmin;
-    height: 20vmin;
+    width: 160px;
+    height: 160px;
     background-color: blanchedalmond;
     top: 15vmin;
     left: 50vmin;
@@ -213,21 +209,21 @@ html{
 
 /*transition*/
 .header-tile {
-    width: 20vmin!important;
-    height: 20vmin !important;
-    top: 13.6vh !important;
-    left: 26.5vw !important;
+    width: 160px!important;
+    height: 160px !important;
+    top: 30px !important;
+    left: 46px!important;
 }
 
 .center-tile {
     opacity: 0;
-    left: 40vw !important;
-    top: 40vh !important;
+    left: 30% !important;
+    top: 30%  !important;
 }
 
 .content-tile {
-    top: 15vmin !important;
-    left: 32.4vw !important;
+    width: 510px !important;
+    height: 510px !important;
     opacity: 1 !important;
 }
 
@@ -240,8 +236,9 @@ html{
 
 .back-tile {
     opacity: 1!important;
-    top: 66.6vh !important;
-    left: 62.4vw !important;
+    top: 510px !important;
+    left: 510px!important;
+    z-index: 1;
 }
 
 .header-text {
@@ -254,64 +251,61 @@ html{
 
 .main {
     position: relative;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 65vmin;
-    height: 44vmin;
+    top: 100px;
+    left: 100px;
+    width: 0;
+    height: 0;
     align-items: center;
     transform: rotate(0)!important;
     opacity: 0;
 }
 
+
+.content-data {
+    z-index: -1;
+    width: 160px;
+    height: 160px;
+    transform: rotate(0)!important;
+}
+
 .top-left-data {
     -webkit-shape-outside: polygon(0 0, 0 100%,100% 0);
     float: left;
-    width: 20vmin;
-    height: 20vmin;
-    /*background-color: lightgray;*/
     -webkit-clip-path: polygon(0 0, 0 100%,100% 0);
-    transform: rotate(0)!important;
 }
 
 .top-right-data {
     -webkit-shape-outside: polygon(100% 0, 100% 100%, 0 0);
     float: right;
-    width: 20vmin;
-    height: 20vmin;
-    /*background-color: lightgray;*/
     -webkit-clip-path: polygon(100% 0, 100% 100%, 0 0);
-    transform: rotate(0)!important;
 }
 
 .left-data {
     -webkit-shape-outside: polygon(0 0, 100% 100%, 0 100%);
     float: left;
-    width: 20vmin;
-    height: 20vmin;
-    /*background-color: lightgray;*/
     -webkit-clip-path: polygon(0 0, 100% 100%, 0 100%);
-    transform: rotate(0)!important;
 }
 
 .right-data {
     -webkit-shape-outside: polygon(100% 0, 100% 100%, 0 100%);
     float: right;
-    width: 20vmin;
-    height: 20vmin;
-    /*background-color: lightgray;*/
     -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
-    transform: rotate(0)!important;
 }
 
 .main-tile {
     opacity: 1!important;
-    top: 13vmin !important;
-    left: 35vw !important;
-    transition-delay: 1.5s;
+    transition-delay: 1s;
+    width: 510px !important;
+    height: 510px !important;
 }
 
 .font-icon-size {
     font-size: 2.5vmin !important;
     margin: 0 1%;
+}
+
+@media (max-height: 750px),(max-width : 750px) {
+    body {
+        overflow: auto;
+    }
 }

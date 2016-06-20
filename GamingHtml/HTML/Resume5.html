@@ -12,18 +12,19 @@
         <div class="main-menu">
             <div class="middle" id="main">
                 <h1>Hello! I am Developer</h1>
-
+               
+                
             </div>
-            <div class="side top">
+            <div class="side top" data-tile="1">
                 <h3>Skills</h3>
             </div>
-            <div class="side left">
+            <div class="side left" data-tile="0">
                 <h3>AboutMe</h3>
             </div>
-            <div class="side right">
+            <div class="side right" data-tile="2">
                 <h3>Experience</h3>
             </div>
-            <div class="side bottom">
+            <div class="side bottom" data-tile="3">
                 <h3>Projects</h3>
             </div>
         </div>
@@ -39,8 +40,8 @@
 
 
         <div class="main">
-            <div class="top-left-data"></div>
-            <div class="top-right-data"></div>
+            <div class="top-left-data content-data "></div>
+            <div class="top-right-data content-data"></div>
             <p class="Summary">
                 <br />
                 <br />
@@ -59,7 +60,7 @@
                 <i class="fa fa-linkedin  font-icon-size"></i>
                 <i class="fa fa-github  font-icon-size"></i>
                 <i class="fa fa-skype  font-icon-size"></i>
-               <!-- <i class="fa fa-stack-overflow font-icon-size"></i>-->
+                <!-- <i class="fa fa-stack-overflow font-icon-size"></i>-->
                 <i class="fa fa-envelope font-icon-size tooltip"></i>
                 <i class="fa fa-download font-icon-size tooltip"></i>
             </p>
@@ -97,7 +98,7 @@
                 Perform Unit testing, created stored procedure And data migration.
                             <br />
 
-              
+
 
                 <strong>Promact Infotech Pvt Ltd,</strong>
                 <br />
@@ -128,8 +129,8 @@
                 <br />
             </p>
 
-            <div class="left-data"></div>
-            <div class="right-data"></div>
+            <div class="left-data content-data"></div>
+            <div class="right-data content-data"></div>
         </div>
     </div>
 
@@ -229,7 +230,25 @@
 
         });
 
+        $(".side").on("click", function () {
+            var x = $(this).data("tile");
+            $(".side").addClass("center-tile");
+            $("#main").addClass("header-tile");
+            $("#main > h1").addClass("header-text");
+            Animate_Text(displayDetail);
+            $("#content-tile").addClass("content-tile");
+            $("#content-tile").css("background-color", BGColors[x]);
+            $(".main").addClass("main-tile");
 
+            var t = "." + NextTabs[x];
+            $(t).addClass("display-tile");
+            $(".back").addClass("back-tile");
+            $(".back").css("background-color", NextColors[x]);
+            $(".back > h3").addClass("display-tile")
+            displayDetail = false;
+
+
+        });
     });
 </script>
 </html>
