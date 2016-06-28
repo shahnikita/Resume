@@ -4,31 +4,45 @@
     <title></title>
     <link href="../Content/Resume3/StyleSheet1.css" rel="stylesheet" />
     <link href="../css/font-awesome.min.css" rel="stylesheet" />
-    <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" />-->
+
 </head>
 <body>
     <div class="container">
-        <div class="tiles tile-1 tiles-hover " data-popup="profile">
-            <h2 class="head-text profile-txt">Profile</h2>
-            <!-- <img src="../Images/Test/profile1.png" alt="" class="icn-profile" />-->
+        <div class="tiles tile-1" data-popup="profile">
+            <h2>Profile</h2>
 
         </div>
+        <div class="tiles tile-2" data-popup="education">
+            <h2>Skills</h2>
+            <p>
+                My Skills
+            </p>
+            <i class="fa fa-wrench" aria-hidden="true"></i>
 
-        <div class="tiles tile-2 tiles-hover" data-popup="education">
-            <h2 class="head-text profile-txt">Skills</h2>
-            <!--            <img src="../Images/Test/bookshelf-128.png" alt="" class="icn-profile" />-->
         </div>
-        <div class="tiles tile-3 tiles-hover" data-popup="experience">
-            <h2 class="head-text profile-txt">Experience</h2>
-            <!--<img src="../Images/Test/briefcase-128.png" alt="" class="icn-profile" />-->
+        <div class="tiles tile-3" data-popup="experience">
+            <h2>Experience</h2>
+            <p>
+                View My Resume
+            </p>
+            <i class="fa fa-suitcase" aria-hidden="true"></i>
+
         </div>
-        <!-- <div class="tiles tile-4" data-popup="projects">
-            <h2 class="head-text project-txt">Projects</h2>
-            <img src="../Images/Test/dev-128.png" alt="" class="icn-profile" />
-        </div>-->
-        <div class="tiles tile-5 tiles-hover" data-popup="contact">
-            <h2 class="head-text profile-txt">Contact</h2>
-            <!--  <img src="../Images/Test/contacts-128.png" alt="" class="icn-profile" />-->
+        <div class="tiles tile-4" data-popup="projects">
+            <h2>Projects</h2>
+            <p>
+                My Recent Works
+            </p>
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+
+        </div>
+        <div class="tiles tile-5" data-popup="contact">
+            <h2>Contact</h2>
+            <p>
+                Drop Me a Line
+            </p>
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+
         </div>
 
     </div>
@@ -231,7 +245,7 @@
         </div>
     </div>
 
-    <div class="md-modal md-effect-17 contact-content" id="contact">
+    <div class="md-modal" id="contact">
         <div class="md-content">
             <!--header-->
             <h3>Contact <span class="close"></span></h3>
@@ -244,7 +258,7 @@
 
                 </div>
                 <div class="md-content-right scrollable-div">
-                    <div class="pop-up">
+                    <!--<div class="pop-up">
                         <span class="pop-up-header">Available on Social Networks      
                         </span>
                         <div class="pop-up-content">
@@ -254,7 +268,7 @@
                             <i class="fa fa-skype fa-2x font-icon-size"></i>
                         </div>
 
-                    </div>
+                    </div>-->
                     <div class="pop-up">
                         <span class="pop-up-header">
                             <i class="fa fa-home fa-2x font-icon-size"></i>
@@ -316,21 +330,16 @@
 <script type="text/javascript">
     $(document).ready(function () {
 
-        function toggleTileHoverClass() {
-            // $(this).toggleClass("tiles-hover");
-        }
+        
         function clickTile() {
-            //  $(".container").addClass("container-rotate");
+           
             $("body").addClass("md-perspective");
-            //  $(".tiles").removeClass("tiles-hover");
-            //  $(".tiles").off("hover");
-            $(".tiles").off("click");
             var mid = $(this).data("popup");
             $("#" + mid).addClass("md-show");
         }
 
 
-        $(".tiles").on("hover", toggleTileHoverClass);
+      
 
 
         $(".tiles").on("click", clickTile);
