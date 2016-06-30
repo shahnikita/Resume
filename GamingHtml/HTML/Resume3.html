@@ -8,8 +8,26 @@
 </head>
 <body>
     <div class="container">
-        <div class="tiles tile-1" data-popup="profile">
-            <h2>Profile</h2>
+        <div class="tiles tile-1">
+            <img src="../Images/Test/pic.jpg" alt="" class="profile-img" />
+            <h2>Nikita Shah</h2>
+            <p>
+                As a highly motivated computer professional with the enthusiasm to accept new challenges, the opportunity to work as a software engineer.
+            </p>
+            <a>Get My CV
+                <i class="fa fa-download"></i>
+            </a>
+            <div>
+                <span>Available on Social Networks      
+                </span>
+                <div>
+                    <i class="fa fa-facebook-square"></i>
+                    <i class="fa fa-linkedin-square"></i>
+                    <i class="fa fa-github-square"></i>
+                    <i class="fa fa-skype"></i>
+                </div>
+
+            </div>
 
         </div>
         <div class="tiles tile-2" data-popup="education">
@@ -23,7 +41,7 @@
         <div class="tiles tile-3" data-popup="experience">
             <h2>Experience</h2>
             <p>
-                View My Resume
+                Worked With
             </p>
             <i class="fa fa-suitcase" aria-hidden="true"></i>
 
@@ -47,7 +65,7 @@
 
     </div>
 
-    <div class="md-modal md-effect-17 profile-content" id="profile">
+    <div class="md-modal" id="profile">
         <div class="md-content">
             <!--header-->
             <h3>Profile <span class="close"></span></h3>
@@ -72,25 +90,92 @@
         </div>
     </div>
 
-    <div class="md-modal md-effect-17 education-content" id="education">
+    <div class="md-modal" id="education">
         <div class="md-content">
+            <!--header-->
             <h3>Skills <span class="close"></span></h3>
-            <div class="pop-up">
-                <span class="pop-up-header">Programming:</span>
+            <!--Content-->
+            <div class="scrollable-div">
+                <div class="pop-up">
+                    <span class="pop-up-header">Programming
+                    </span>
+                    <div class="pop-up-content">
+                        <div class="skill">
+                            <div class="circlestat skill-circle" data-percent="45"></div>
+                            <span>C#</span>
+                        </div>
+                        <div class="skill">
+                            <div class="circlestat skill-circle" data-percent="65"></div>
+                            <span>.NET Framework</span>
+                        </div>
+                        <div class="skill">
+                            <div class="circlestat skill-circle" data-percent="75"></div>
+                            <span>SQL Server</span>
+                        </div>
+                        <div class="skill">
+                            <div class="circlestat skill-circle" data-percent="55"></div>
+                            <span>Unit testing</span>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="pop-up">
+                    <span class="pop-up-header">Scripting Languages
+                    </span>
+                    <div class="pop-up-content">
+                        <div class="skill">
+                            <div class="circlestat skill-circle" data-percent="45"></div>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill">
+                            <div class="circlestat skill-circle" data-percent="65"></div>
+                            <span>JQuery</span>
+                        </div>
+                        <div class="skill">
+                            <div class="circlestat skill-circle" data-percent="75"></div>
+                            <span>Knockoutjs</span>
+                        </div>
+                        <div class="skill">
+                            <div class="circlestat skill-circle" data-percent="55"></div>
+                            <span>Angularjs</span>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="pop-up">
+                    <span class="pop-up-header">Technologies 
+                    </span>
+                    <div class="pop-up-content">
+                        <div class="skill">
+                            <div class="circlestat skill-circle" data-percent="45"></div>
+                            <span>ASP.Net MVC</span>
+                        </div>
+                        <div class="skill">
+                            <div class="circlestat skill-circle" data-percent="65"></div>
+                            <span>ADO.Net</span>
+                        </div>
+                        <div class="skill">
+                            <div class="circlestat skill-circle" data-percent="75"></div>
+                            <span>Web-Services</span>
+                        </div>
+                        <div class="skill">
+                            <div class="circlestat skill-circle" data-percent="55"></div>
+                            <span>Entity-Framework</span>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-            <div class="pop-up">
-                <span class="pop-up-header">Scripting:</span>
-            </div>
-            <div class="pop-up">
-                <span class="pop-up-header">Programming Language</span>
-            </div>
-            <div class="pop-up">
-                <span class="pop-up-header">Programming Language</span>
-            </div>
+
+
         </div>
     </div>
 
-    <div class="md-modal md-effect-17 experience-content" id="experience">
+    <div class="md-modal" id="experience">
         <div class="md-content">
             <!--header-->
             <h3>Experience <span class="close"></span></h3>
@@ -145,7 +230,7 @@
         </div>
     </div>
 
-    <div class="md-modal md-effect-17 projects-content" id="projects">
+    <div class="md-modal" id="projects">
         <div class="md-content">
             <!--header-->
             <h3>Projects Taken<span class="close"></span></h3>
@@ -269,25 +354,8 @@
                         </div>
 
                     </div>-->
-                    <div class="pop-up">
-                        <span class="pop-up-header">
-                            <i class="fa fa-home fa-2x font-icon-size"></i>
-                            Address
-                        </span>
-                        <p class="pop-up-content">
-                            234, London Street, EL10 6 BG
-                        </p>
-                    </div>
-                    <div class="pop-up">
-                        <span class="pop-up-header">
-                            <i class="fa fa-phone fa-2x font-icon-size"></i>
-                            Phone
-                        </span>
-                        <p class="pop-up-content">
-                            +61 3 8376 6284
-                        </p>
 
-                    </div>
+
                     <div class="pop-up">
                         <span class="pop-up-header">
                             <i class="fa fa-envelope fa-2x font-icon-size"></i>
@@ -326,39 +394,54 @@
 
 </body>
 <script src="../Scripts/jquery-1.7.1.js"></script>
-
+<script src="../Scripts/jquery.circliful.min.js"></script>
+<script src="../Scripts/animsition.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
 
-        
+        var hasCreatedObjects = false;
         function clickTile() {
-           
-            $("body").addClass("md-perspective");
+
+            $(".container").addClass("md-perspective");
             var mid = $(this).data("popup");
             $("#" + mid).addClass("md-show");
+            if (mid == 'education') {
+                animateSkills();
+            }
         }
 
 
-      
 
 
-        $(".tiles").on("click", clickTile);
+
+        $(".tiles[data-popup]").on("click", clickTile);
 
 
         //model close
         $(".md-close, .close").on("click", function () {
-            //    $(".container").removeClass("container-rotate");
-            $("body").removeClass("md-perspective");
-            $(this).closest('.md-effect-17').removeClass("md-show");
-            //   $(".tiles").on("hover", toggleTileHoverClass);
-            $(".tiles").on("click", clickTile);
+
+            $(".container").removeClass("md-perspective");
+            $(this).closest('.md-modal').removeClass("md-show");
+            $(".tiles[data-popup]").on("click", clickTile);
         });
 
-        //var mapCanvas = document.getElementById("map");
-        //var mapOptions = {
-        //    center: new google.maps.LatLng(22.3072, 73.1812), zoom: 10
-        //}
-        //var map = new google.maps.Map(mapCanvas, mapOptions);
+        function animateSkills() {
+            if (!hasCreatedObjects) {
+                $('.circlestat').each(function (index, ele) {
+                    $(ele).circliful({
+                        foregroundColor: '#f39c12',
+                        backgroundColor: '#77736d',
+                        foregroundBorderWidth: 20,
+                        fontColor: 'black',
+                        percentageTextSize: 32,
+                        animationStep: 5,
+                        pointSize: $(ele).data("percent"),
+                        percent: $(ele).data("percent")
+                    });
+                });
+                hasCreatedObjects = true;
+            }
+        }
     });
 </script>
 </html>
