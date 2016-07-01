@@ -1,4 +1,7 @@
-﻿/*@import url(http://fonts.googleapis.com/css?family=Open+Sans);*/
+﻿/*@import url(https://fonts.googleapis.com/css?family=Ubuntu:400);*/
+
+@import 'https://fonts.googleapis.com/css?family=Courgette';
+
 
 @keyframes fade-in-down {
     0% {
@@ -24,7 +27,7 @@ html, body {
     width: 100%;
     margin: 0px;
     height: 100%;
-    font-family: cursive;
+    font-family: 'Open Sans';
     font-weight: normal;
     -webkit-font-smoothing: antialiased!important;
     overflow: auto;
@@ -39,6 +42,10 @@ html, body {
     background-color: #f39c12;
     /*background-color: #4e6d82;*/
     transition: all 0.3s linear;
+}
+
+h2,h3,.pop-up-header{
+    font-family: 'Courgette', cursive !important;
 }
 
 .tiles {
@@ -241,7 +248,7 @@ html, body {
 }
 
 .pop-up-header {
-   font-size: 1.7vw;
+    font-size: 1.7vw;
     border-bottom: 1.5px dashed #000;
 }
 
@@ -310,16 +317,18 @@ html, body {
     .tile-1 {
         height: 60%;
     }
-     
+
     .tiles h2 {
         width: 30%;
         margin: 0;
         display: inline-block;
         font-size: 4vh;
     }
-       .tile-1 h2 {
-            width:auto;
-        }
+
+    .tile-1 h2 {
+        width: auto;
+    }
+
     .tiles p {
         height: auto;
         width: 50%;
@@ -335,9 +344,11 @@ html, body {
         font-size: 6vh !important;
         margin-top: 3%;
     }
+
     .tile-1 i {
-          font-size: 4vh !important;
+        font-size: 4vh !important;
     }
+
     .profile-img {
         width: 12%;
         display: block;
@@ -400,6 +411,7 @@ html, body {
     .skill {
         width: 40%;
     }
+
     .pop-up-header {
         font-size: 3vh;
     }
